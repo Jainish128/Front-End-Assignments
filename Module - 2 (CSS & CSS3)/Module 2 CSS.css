@@ -1,0 +1,194 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: verdana;
+}
+
+/* ========== Main ==========  */
+#main
+{
+    width: 98%;
+    height: 725px;
+    margin: 10px 1%;
+    /* background-color: lavender; */
+    
+}
+
+/* ========== Top ========== */
+.top
+{
+    width: 94%;
+    height: 335px;
+    margin: 0px 3%;
+    display: flex;
+    /* background-color: lightblue; */
+}
+.left-top
+{
+    width: 30%;
+    height: 335px;
+    background-color: white;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+}
+.thumbnail
+{
+    width: 100%;
+    height: 175px;
+    background-color: rgb(75, 75, 75);
+    color: white;
+    font-size: 17px;
+    /* Heading ne Center Ma Lavva */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* ------------------------- */
+}
+.content
+{
+    width: 84%;
+    height: 110px;
+    margin: 25px 8%;
+    /* background-color: lightskyblue; */
+}
+.content p
+{
+    width: 100%;
+    height: 60px;
+    /* background-color: lavender; */
+    text-align: justify;
+}
+.content .btn
+{
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    /* background-color: aquamarine; */
+    display: flex;
+}
+.content .btn .view
+{
+    width: 70px;
+    height: 30px;
+    border: 2px solid black;
+    font-size: 17px;
+    text-align: center;
+    line-height: 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.content .btn .view:hover
+{
+    background-color: black;
+    color: azure;
+    box-shadow: 0px 0px 3px black;
+}
+.content .btn .view:hover a
+{
+    color: azure;
+}
+.content .btn .edit
+{
+    width: 60px;
+    height: 30px;
+    border: 2px solid black;
+    border-left: none;
+    font-size: 17px;
+    text-align: center;
+    line-height: 25px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.content .btn .edit:hover
+{
+    background-color: black;
+    color: azure;
+    box-shadow: 0px 0px 3px black;
+}
+.content .btn .edit:hover a
+{
+    color: azure;
+}
+.content .btn .more
+{
+    width: 50px;
+    height: 20px;
+    margin-top: 5px;
+    /* border: 1px solid black; */
+    font-size: 13px;
+    margin-left: 175px;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+.content .btn .more:hover
+{
+    text-decoration: underline;
+    /* border: 1px solid rgb(0, 183, 255); */
+    /* border: 1px solid red; */
+    /* border-radius: 50%; */
+    /* color: rgb(0, 183, 255); */
+}
+/* ---------- Center - Top ---------- */
+.center-top
+{
+    width: 32%;
+    height: 335px;
+    margin-left: 3%;
+    background-color: white;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+}
+/* ---------- Right - Top ---------- */
+.right-top
+{
+    width: 32%;
+    height: 335px;
+    margin-left: 3%;
+    background-color: white;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+}
+/* ---------- Bottom ---------- */
+.bottom
+{
+    width: 94%;
+    height: 335px;
+    margin: 2% 3% 0% 3%;
+    display: flex;
+    /* background-color: lightblue; */
+}
+/* ---------- Bottom - Left ---------- */
+.left-bottom
+{
+    width: 30%;
+    height: 335px;
+    background-color: white;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+}
+/* ---------- Bottom - Center ---------- */
+.center-bottom
+{
+    width: 32%;
+    height: 335px;
+    margin-left: 3%;
+    background-color: white;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+}
+/* ---------- Bottom - Right ---------- */
+.right-bottom
+{
+    width: 32%;
+    height: 335px;
+    margin-left: 3%;
+    background-color: white;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+}
+
