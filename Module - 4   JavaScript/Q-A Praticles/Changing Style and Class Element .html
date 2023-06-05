@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Style & Class Element Changing in JS </title>
+</head>
+<body>
+
+    <p id="Old-Class"> Old Element & Old Class </p>
+    <p id="New-Class"> New Class & New Element </p>
+    
+    <script>
+        // Changin Style using JavaScript.
+        let Old_Class = document.getElementById('Old-Class');
+        Old_Class.style.color = "red";
+        Old_Class.style.fontSize = "30px";
+        
+        // Changing Class usign JavaScript.
+        let Old_Class = document.getElementById('New-Class');
+        Old_Class.className = New_Class;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Adding New Elements Dynamically </title>
+</head>
+<body>
+    <script>
+
+        // (1) Create the element you want to add. For example, if you want to add a new paragraph (<p>) element, you can create it using the document.createElement() method.
+            let NewParagraph = document.createElement('p');
+        
+        // (2) Optionally, modify the properties or content of the element you created. You can set         attributes, add text, or make any other desired changes.
+            NewParagraph.textContent = "This is a New Paragraph.";
+
+        // (3) Find the parent element to which you want to append the new element. This is the existing element under which you want to add the new element. You can use methods like getElementById(), querySelector(), or others to find the parent element.
+            let ParentElement = document.getElementById('parent');
+
+        // (4) Append the new element to the parent element using the appendChild() method.
+            ParentElement.appendChild(NewParagraph);
+
+
+    </script>
+</body>
+</html>

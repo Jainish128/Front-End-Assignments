@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pop up Boxes in JS </title>
+</head>
+
+<body>
+
+    <button onclick="AlertBox()"> Alert </button>
+    <button onclick="ConfirmBox()"> Confirm </button>
+    <button onclick="PromptBox()"> Prompt </button>
+
+    <script>
+        function AlertBox() {
+            alert("How are you.")
+        }
+        function ConfirmBox() {
+            if (confirm("Please, Submit this details.")) {
+                alert("You have submited details.")
+            }
+            else {
+                alert("Please, Submit this details first.")
+            }
+        }
+        function PromptBox() {
+            let name = prompt("Please Enter Your Name : ")
+            if (name) {
+                confirm("Your Name is : " + name)
+            }
+            else {
+                alert("Please Enter Your Name Again.")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

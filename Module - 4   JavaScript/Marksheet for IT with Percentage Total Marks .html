@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Marksheet for IT with Percentage & Total Marks </title>
+    <style>
+        body
+        {
+            font-family: arial;
+        }
+        table
+        {
+            width: 30%;
+            border: 3px solid black;
+        }
+        b
+        {
+            font-size: 20px;
+        }
+        input
+        {
+            width: 30%;
+            height: 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #333;
+        }
+        #total
+        {
+            width: 18%;
+            color: blue;
+            border: none;
+            font-size: 20px;
+        }
+        #percentage
+        {
+            width: 15%;
+            font-size: 20px;
+            border: none;
+            color: blue;
+        }
+        #total, #percentage:focus
+        {
+            outline: none;
+        }
+
+        #result
+        {
+            padding: 5px 30px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table cellspacing="10px">
+        <tr align="center">
+            <td colspan="2"><b> Marksheet for Information Technology </b></td>
+        </tr>
+        <tr>
+            <td colspan="2"> &nbsp; </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">  Enter Marks </td>
+        </tr>
+        <tr>
+            <td> 1. C Language </td>
+            <td> <input type="text" id="mark1" required> </td>
+        </tr>
+        <tr>
+            <td> 2. C++ Language </td>
+            <td> <input type="text" id="mark2" required> </td>
+        </tr>
+        <tr>
+            <td> 3. Database </td>
+            <td> <input type="text" id="mark3" required> </td>
+        </tr>
+        <tr>
+            <td> 4. HTML </td>
+            <td> <input type="text" id="mark4" required> </td>
+        </tr>
+        <tr>
+            <td> 5. CSS </td>
+            <td> <input type="text" id="mark5" required> </td>
+        </tr>
+        <tr>
+            <td> 6. PHP </td>
+            <td> <input type="text" id="mark6" required> </td>
+        </tr>
+        <tr>
+            <td> 7. Core JAVA </td>
+            <td> <input type="text" id="mark7" required> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> <button id="result"> Result </button> </td>
+        </tr>
+        <tr>
+            <td>
+                Total is : <input type="text" id="total" readonly>/ 350
+            </td>
+            <td>
+                Percentage is : <input type="text" id="percentage" readonly>%
+            </td>
+        </tr>
+    </table>
+    
+
+    <script>
+
+        var mark1 = document.getElementById('mark1');
+        var mark2 = document.getElementById('mark2');
+        var mark3 = document.getElementById('mark3');
+        var mark4 = document.getElementById('mark4');
+        var mark5 = document.getElementById('mark5');
+        var mark6 = document.getElementById('mark6');
+        var mark7 = document.getElementById('mark7');
+
+        var total = document.getElementById('total');
+        var percentage = document.getElementById('percentage');
+        
+        document.getElementById('result').addEventListener("click", function () {
+            total.value = parseInt(mark1.value)
+                        + parseInt(mark2.value)
+                        + parseInt(mark3.value)
+                        + parseInt(mark4.value)
+                        + parseInt(mark5.value)
+                        + parseInt(mark6.value)
+                        + parseInt(mark7.value)
+        })
+        document.getElementById('result').addEventListener("click", function () {
+            percentage.value = parseInt(total.value) * 100 / 350;
+        })
+
+    </script>
+
+</body>
+</html>

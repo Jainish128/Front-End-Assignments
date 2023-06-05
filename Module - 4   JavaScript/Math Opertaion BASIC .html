@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Math Operatin BASIC </title>
+    <style>
+        body {
+            font-family: arial;
+
+        }
+
+        main {
+            width: 40%;
+            height: 250px;
+            display: flex;
+            border: 2px solid red;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        aside {
+            width: 50%;
+            height: 250px;
+            /* background-color: yellow; */
+            padding-left: 15px;
+        }
+
+        h2 {
+            font-weight: lighter;
+        }
+
+        button {
+            width: 70px;
+            height: 40px;
+            margin: 0 5px 10px 5px;
+            font-size: 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+
+        section {
+            width: 50%;
+            height: 250px;
+            /* background-color: yellowgreen; */
+        }
+
+        input {
+            width: 90%;
+            height: 35px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            color: black;
+            background: transparent;
+            border: 1px solid red;
+        }
+
+        input:last-child {
+            margin-top: 10px;
+        }
+
+        b {
+            font-size: 25px;
+            margin: 50px;
+            line-height: 120px;
+            font-weight: lighter;
+        }
+
+        div {
+            margin-top: 50px;
+        }
+
+        span {
+            /* font-weight: bold; */
+            font-size: 30px;
+        }
+
+        input[type=text] {
+            width: 30%;
+            height: 40px;
+            background: transparent;
+            border: none;
+            font-size: 40px;
+            font-weight: bold;
+            color: green;
+        }
+
+        input[type=text]::placeholder {
+            color: black;
+        }
+
+        input[type=text]:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <aside>
+            <h2> Enter 1st Number : </h2>
+            <h2> Enter 2nd Number : </h2>
+            <button id="plus"> + </button>
+            <button id="less"> - </button>
+            <button id="multiply"> * </button>
+            <button id="divide"> / </button>
+            <button id="percentage"> % </button>
+        </aside>
+
+        <section>
+            <input id="first" type="number">
+            <input id="second" type="number">
+            <!-- <b> Answer is : <span id="result">  </span> </b> -->
+            <div>
+                <span> Answer is : </span>
+                <input type="text" id="result" readonly>
+            </div>
+        </section>
+    </main>
+
+    <script>
+
+        var FirstNumber = document.getElementById('first');
+        var SecondNumber = document.getElementById('second');
+        var Result = document.getElementById('result');
+
+        document.getElementById('plus').addEventListener("click", function () {
+            Result.value = parseInt(FirstNumber.value) + parseInt(SecondNumber.value);
+        });
+
+        document.getElementById('less').addEventListener("click", function () {
+            Result.value = parseInt(FirstNumber.value) - parseInt(SecondNumber.value);
+        })
+
+        document.getElementById('multiply').addEventListener("click", function () {
+            Result.value = parseInt(FirstNumber.value) * (SecondNumber.value);
+        })
+
+        document.getElementById('divide').addEventListener("click", function () {
+            Result.value = (FirstNumber.value) / (SecondNumber.value);
+        })
+
+        document.getElementById('percentage').addEventListener("click", function () {
+            Result.value = (FirstNumber.value) * (SecondNumber.value) / 100;
+        })
+
+    </script>
+
+</body>
+
+</html>
