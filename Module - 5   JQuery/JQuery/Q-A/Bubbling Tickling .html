@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bubbling & Tickling Event with JQuery </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // $("div").children().css({"border": "3px solid green"})
+            // $("body").find("div, li").css({"border": "5px solid green"})
+            $("div").find("span").css({"border": "5px solid #777"})
+            $("body").find("div").css({"width": "40%"})
+        })
+    </script>
+    <style>
+        *
+        {
+            border: 5px solid red;
+            color: red;
+            padding: 10px;
+            font-size: 20px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body> body (Great-Great-Grandfather)
+    <div> div (Great-Grandfather)
+        <ul> ul (Grandfather)
+            <li> li (Direct-Parent)
+                <span>
+                   span (Son)
+                </span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

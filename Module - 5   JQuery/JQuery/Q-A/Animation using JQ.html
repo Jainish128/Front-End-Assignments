@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <title> Animaiton Using JQuery </title>
+    <style>
+        div
+        {
+            margin: 20px;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            background-color: yellowgreen;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <button> Animate </button>
+    <div> Jainish Patel </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                // $("div").animate({left: "500px"})
+
+                var div = $("div");
+                div.animate({left: "500px"})
+                div.animate({top: "400px"})
+                div.animate({left: "20px"})
+                div.animate({top: "20px"})
+                
+            })
+        })
+
+    </script>
+
+</body>
+</html>
