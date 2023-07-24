@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Using JS Output Method </title>
+</head>
+<body>
+    <span> Check the Lucky Draw Winners :  </span>
+    <button onclick="get_alert()"> Check </button>
+
+    <div id="output"></div>
+    <div id="output2"></div>
+
+    <script>
+
+// ---------------------------------------- console.log() ----------------------------------------
+        // Use this method to display output in the browser console. It's perfect for debugging and checking the values of variables or messages during development.
+
+        var name = "Jainish Patel";
+        age = 21;
+        console.log("Name : ", name);       // Output :- Name : Jainish
+        console.log("Age : ", age);         // Output :- Age : 21
+        
+
+// ---------------------------------------- document.write() ----------------------------------------
+        // Use this method to write content directly to the web page. It's best for simple demonstrations or testing purposes, but avoid using it after the page has loaded, as it can overwrite the entire document.
+
+        document.write("<h1> My name is Jainish Patel. </h1>")
+
+
+// ---------------------------------------- alert() ----------------------------------------
+        // Use this method to show a pop-up message to the user with an "OK" button. It's useful for providing important notifications or messages.
+
+        alert("Welcome to our Website.");
+
+        function get_alert() 
+        {
+            alert("You are selected Winner for the Lucky Draw."); 
+        }
+
+
+// ---------------------------------------- innerHTML ----------------------------------------
+        // Use this property to update the HTML content of an element on the web page dynamically. It's commonly used for displaying information based on user interactions or data from JavaScript.
+
+        var outputElement = document.getElementById("output").innerHTML = "<p> Hello, World </p>";
+
+        var outputElement2 = document.getElementById("output2")
+        outputElement2.innerHTML = "<p> Hello, Users </p>";
+
+    </script>
+    
+</body>
+</html>

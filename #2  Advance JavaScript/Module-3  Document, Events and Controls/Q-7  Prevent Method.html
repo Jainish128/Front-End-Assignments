@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-7 || Prevent method </title>
+</head>
+<body>
+
+    <form id="myForm">
+        <table cellspacing="0" cellpadding="5px">
+            <tr>
+                <th colspan="3"> Form </th>
+            </tr>
+            <tr>
+                <td> Firstname </td>
+                <td> : </td>
+                <td> <input type="text" placeholder="Enter your first name here"> </td>
+            </tr>
+            <tr>
+                <td> Lastname </td>
+                <td> : </td>
+                <td> <input type="text" placeholder="Enter your last name here"> </td>
+            </tr>
+            <tr>
+                <td> Email </td>
+                <td> : </td>
+                <td> <input type="email" placeholder="Enter your email id here"> </td>
+            </tr>
+            <tr>
+                <td> Mobile number </td>
+                <td> : </td>
+                <td> <input type="number" placeholder="Enter your Mobile number here"> </td>
+            </tr>   
+            <tr>
+                <td> Password </td>
+                <td> : </td>
+                <td> <input type="password" placeholder="Enter your password here"> </td>
+            </tr>
+            <tr align="center">
+                <td colspan="3"> <input type="submit" value="Submit" id="submit_btn"> </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+    <script>
+
+        // Get the Form and the Submit button
+        var myForm = document.getElementById("myForm");
+        var submitBtn = document.getElementById("submit_btn");
+
+        // Add a Click Event Listener to the Submit Button
+        submitBtn.addEventListener('click', function (event) {
+            // Prevent the Form from Submitting
+            event.preventDefault();
+        })
+
+        // Perform your custom actions or Validations here
+        // For example, you can access form data and perform some checks
+
+        // var formData = new FormData(myForm);
+        // console.log('Form data:', formData); 
+
+        // We can perform further actions or Send the form data to the server using AJAX, etc.
+    </script>
+    
+</body>
+</html>

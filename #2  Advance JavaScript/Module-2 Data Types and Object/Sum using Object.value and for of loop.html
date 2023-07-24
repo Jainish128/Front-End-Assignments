@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sum using Object.values and for...of loop </title>
+</head>
+<body>
+
+    <button onclick="call_function()"> Sum of all Salaries </button>
+
+    <script>
+
+        function sumSalaries(salaries) 
+        {
+            // Get an Array of Salary Values.
+            var salaryValues = Object.values(salaries); 
+
+            // Initialize the sum to 0
+            var sum = 0;
+
+            // Use a for...of loop to calculate the sum of all salaries.
+            for (var salary of salaryValues)
+            {
+                sum += salary;
+            }
+            return sum;
+        };
+
+        function call_function() 
+        {
+            var salaries = { "John" : 100, "Pete" : 300, "Mary" : 250 };
+
+            alert(sumSalaries(salaries));       // Output : 650    
+        }
+            
+        
+        
+
+    </script>
+    
+</body>
+</html>

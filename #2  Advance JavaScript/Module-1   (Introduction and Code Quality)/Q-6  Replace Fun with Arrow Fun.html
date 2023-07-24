@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-6 || Replace Functions with Arrow Functions </title>
+</head>
+<body>
+
+    <h2 id="ask"> Can you ready for Q-A. </h2>
+    <button id="yes" onclick="show_QA()"> Yes </button>
+    <button id="no" onclick="again()"> No </button>
+
+    <script>
+
+        var ask = document.getElementById("ask");
+        var yes = document.getElementById("yes");
+        var no = document.getElementById("no");
+
+        function show_QA() 
+        {   
+            var q = confirm("You are a Front-End Developer ?");
+            if (q == true) 
+            {
+                // alert("You have been Selected for this Interview.");
+                var agree = confirm("You have been Selected for this Interview. Do you Agree for this Interview ?");
+                if (agree == true) 
+                {
+                    alert("You Agreed for this Interview.");    
+                }
+                else
+                {
+                    alert("You Canceled the Execution.");
+                }
+            }   
+            else
+            {
+                alert("Sorry, This Interview is Only For Front-End Developer.");
+            } 
+        }
+
+
+        function again() 
+        {
+            alert("Please, Try After Some Time ?");    
+        }
+
+    </script>
+    
+</body>
+</html>

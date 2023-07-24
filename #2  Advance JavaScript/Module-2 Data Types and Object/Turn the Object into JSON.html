@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Turn the Object into JSON </title>
+</head>
+<body>
+    
+    <script>
+
+        var user = { name : "John Smith", age : 35 };
+        
+        // Step 1 : Convert the obejct to a JSON String.
+        var userJSON = JSON.stringify(user);
+
+        // Step 2 : Parse the JSON String back into an object.
+        var parsedUser = JSON.parse(userJSON);
+
+        console.log(userJSON);          // Output: {"name":"John Smith","age":35}
+        console.log(parsedUser);        // Output: { name: "John Smith", age: 35 }
+
+    </script>
+
+</body>
+</html>

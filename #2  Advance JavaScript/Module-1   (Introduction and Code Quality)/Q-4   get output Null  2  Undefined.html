@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-4 || get output of null || 2 || undefined </title>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" id="input_value">
+        <input type="submit" id="submit" value="Submit" onclick=" Value_0()">
+    </form>
+    
+    <script>
+ 
+       function Value_0() 
+       {
+            var input = document.getElementById("input_value").value;
+            var button = document.getElementById("submit");
+
+            if (input == null || input == 2 || input == undefined || input == "") 
+            {
+                alert('null || 2 || undefined');
+                return true;
+            } 
+           
+       }
+    </script>
+
+</body>
+
+</html>

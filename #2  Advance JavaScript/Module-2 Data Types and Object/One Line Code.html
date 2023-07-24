@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> One Line Code </title>
+</head>
+<body>
+    
+    <script>
+
+// ------------------------------------------------------------------------------------------------------------------------------
+        // a) Create an empty object user.            
+        var user = {};                  // Creating an empty object using object literal notation.
+
+        var user2 = new Object();       // Creating an empty object using Object() constructor.
+
+        console.log(user);
+        console.log(user2);
+
+// ------------------------------------------------------------------------------------------------------------------------------
+        // b) Add the property name with the value John.
+        var user = { name : "John" };
+        console.log(user);
+
+// ------------------------------------------------------------------------------------------------------------------------------
+        // c) Add the property surname with the value Smith.
+        var user = { name : "John", surname : "Smith" };
+        console.log(user);
+
+// ------------------------------------------------------------------------------------------------------------------------------
+        // d) Change the value of the name to Pete.
+        user.name = "Pete";
+        console.log(user.name);
+
+// ------------------------------------------------------------------------------------------------------------------------------
+        // e) Remove the property name from the object. 
+        delete user.name;
+        console.log(user);
+
+    </script>
+
+</body>
+</html>

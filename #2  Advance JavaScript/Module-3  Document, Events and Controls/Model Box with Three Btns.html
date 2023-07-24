@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Model Box with 3 Buttons </title>
+
+    <style>
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+        }
+        body
+        {
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .open-model
+        {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 5px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .model
+        {
+            width: 25%;
+            height: 200px;
+            position: relative;
+            display: none;
+        }
+        .model-content
+        {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        p
+        {
+            padding: 20px 0 0 0;
+        }
+        .close
+        {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .submit-btn
+        {
+            padding: 8px 20px;
+            margin: 35px 5% 0 20%;
+            background-color: green;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover 
+        {
+            background-color: #fff;
+            outline: 2px solid green;
+            color: green;
+        }
+
+        .cancel-btn
+        {
+            padding: 8px 20px;
+            /* margin: 0 25% 0 65%; */
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .cancel-btn:hover 
+        {
+            background-color: #fff;
+            outline: 2px solid red;
+            color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <button class="open-model" onclick="openModel()"> Open Model Box </button>
+    
+    <section id="myModel" class="model">
+        <div class="model-content">
+            <span class="close" onclick="closeModal()"> &times; </span>
+            <h2> Model Box </h2>
+            <p> This is a simple model box. Click "Close Modal" to close. </p>
+            <button class="submit-btn" onclick="closeModal()"> Submit </button>
+            <button class="cancel-btn" onclick="closeModal()"> Cancel </button>
+        </div>
+    </section>
+
+
+
+
+    <script>
+
+        // Function to Open the Model
+        function openModel() 
+        {
+            var modal = document.getElementById("myModel");
+            modal.style.display = "flex";    
+        }
+
+        // Function to Close the Modal
+        function closeModal() 
+        {
+            var modal = document.getElementById("myModel");
+            modal.style.display = "none";    
+        }
+
+        // Function to handle the Ssubmit button inside the modal.
+        function submitModal() 
+        {
+            // Perform actions when the Submit button is clicked (Add your logic here)
+            console.log("Submit button Clicked.");
+            closeModal();
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+table
+{
+    width: 80%;
+    margin: 3% 10%;            
+}
+
+.headings
+{
+    height: 70px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-card
+{
+    width: 90%;
+    height: 150px;
+    margin: 0 5%;
+    /* background-color: lightblue; */
+}
+.product-image
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin: 15px 0 0 0;
+}
+p
+{
+    padding: 10px 0 0 0;
+    font-size: 20px;
+}
+
+.quantity
+{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin: 10px 0 0 30px;
+    font-size: 20px;
+    caret-color: #333;
+    color: #333;
+}
+.quantity:focus
+{
+    outline: none;
+    border: 2px solid green;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#unit-price, .subtotal-price
+{
+    text-align: center;
+    font-size: 22px;
+}
+
+#remove-btn
+{
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 0 0 20px;
+}
+#remove-btn:hover 
+{
+    /* background-color: #fff;
+    border: 2px solid orangered;
+    color: orangered; */
+    transition: 0.5s ease;
+    transform: scale(0.9);
+}
+
+#total-amt
+{
+    text-align: center;
+    font-size: 25px;
+    color: green;
+}
+.last-row
+{
+    height: 50px;
+}

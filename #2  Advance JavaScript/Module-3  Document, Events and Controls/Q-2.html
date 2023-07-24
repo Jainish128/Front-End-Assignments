@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-2 </title>
+</head>
+<body>
+
+    <div class="my-class"> Jainish </div>
+    <div class="my-class"> Mukesh </div>
+    <div class="my-class"> Shivam </div>
+    <div class="my-class"> Deepak </div>
+    <div class="my-class"> Sachin </div>
+    <button id="btn"> Click Me </button>
+
+    <script>
+
+        // Get all Elements with Class "my-class"
+        var elements = document.querySelectorAll(".my-class");
+
+        // Attach a Click Event listener to the Button
+        document.getElementById("btn").addEventListener("click", () => {
+            // Loop through each Element with Class "my-class" and Show an Alert
+            elements.forEach((element, index) => {
+                alert(`Clicked on Element ${index + 1} : ${element.textContent}`);
+            })
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-5  || Age > 18 and get Confirmation </title>
+</head>
+<body>
+    
+    <input type="text" id="age">
+    <input type="submit" value="Submit" onclick="Check_Age(this)">
+
+    <script>
+
+        function Check_Age(age) 
+        {
+            var age = document.getElementById("age").value;
+            
+            if (age > 18) 
+            {
+                alert("You are eligible for this Trip.");    
+            }
+            else
+            {
+                var parent_confirmation = confirm("You are not eligible for this Trip But, Did your parents allow you to for this Trip you will come. So Your parents allows you to for Trip ?");
+                if (parent_confirmation == true) 
+                {
+                    alert("You will come to this Trip at your own Risk.");    
+                }
+                else
+                {
+                    alert("You will not come for this Trip.");
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

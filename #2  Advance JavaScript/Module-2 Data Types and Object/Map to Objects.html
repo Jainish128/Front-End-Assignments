@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Map to Objects </title>
+</head>
+<body>
+
+    <button onclick="id0()"> get Id of 0 Index Number </button>
+    <button onclick="FullName()"> get fullName of 0 Index Number </button>
+
+    <script>
+
+        let john = { name : "John", surname : "Smith", id : 1 };
+        let pete = { name : "Pete", surname : "Hunt", id : 2 };
+        let mary = { name : "Mary", surname : "Key", id : 3 };
+        let users = [ john, pete, mary ];
+        let usersMapped = users.map(({ name, surname, id }) => ({
+            id, fullName : `${name} ${surname}`,
+        }));
+
+        console.log(usersMapped);
+
+        function id0() 
+        {
+            alert(usersMapped[0].id)            // Output : 1
+        }
+
+        function FullName() 
+        {
+            alert(usersMapped[0].fullName);     // Output : John Smith
+        }
+
+    </script>
+    
+</body>
+</html>

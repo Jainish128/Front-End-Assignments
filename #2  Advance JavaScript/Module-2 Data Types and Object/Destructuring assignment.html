@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Destructuring Assignment </title>
+</head>
+<body>
+
+    <script>
+
+        var user = { name : "John", years : 30 };
+
+        // Destructuring Assignment
+        var { name, years: age, isAdmin = false } = user;
+
+        document.write(name + "<br>");           // Output : "John"
+        document.write(age + "<br>");            // Output : 30
+        document.write(isAdmin);                 // Output : false (if no such property exists in the object)
+
+    </script>
+    
+</body>
+</html>

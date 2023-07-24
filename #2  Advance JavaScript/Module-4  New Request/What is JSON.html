@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> What is JSON </title>
+</head>
+<body>
+
+   <p>
+        JSON stands for “JavaScript Object Notation”, and it is a lightweight data interchange format. JSON is commonly used for transmitting data between a server and a web application as an alternative to XML.
+   </p>
+   <p>
+        In simple terms, JSON provides a standardized way to represent data in a format that is both human-readable and machine-readable. It is based on key-value pairs, where each key is a string and each value can be a String, Number, Boolean, Array or Another JSON object.
+   </p>
+
+    
+    <script>
+
+        var object = {
+            "name" : "Jainish",
+            "age" : 20,
+            "isEmployed" : false,
+            "hobbies" : [ "Coding", "Travelling", "Tracking", "Playing BGMI", "Listening Songs" ],
+            "address" : {
+                "area" : "Narol",
+                "city" : "Ahmedabad",
+                "state" : "Gujarat",
+                "country" : "India",
+                "pin code" : 382405
+            }
+        }
+
+        console.log(object);
+        
+    </script>
+
+</body>
+</html>

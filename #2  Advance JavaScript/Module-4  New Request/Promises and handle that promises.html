@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Promises and handle that promises </title>
+</head>
+<body>
+
+    <script>
+
+        // Function to simulate an  asynchronous task with a promise
+
+        function doAsyncTask() 
+        {
+            return new Promise((resolve, reject) =>  {
+                // Simulating an asynchronous task
+                setTimeout(() => {
+                    var randomNumber = Math.random();
+                    if (randomNumber > 0.5) 
+                    {
+                        resolve(randomNumber);      
+                        // Resolve the Promise with a Random Number if it's Greater Than 0.5 
+                    }
+                    else
+                    {
+                        reject(new Error("Random number is Less than or Equal to 0.5"));
+                        // Rejects the Promise with an Error otherwise
+                    }
+                }, 2000);       // Simulating a 2 second delay
+            })   
+        }
+
+
+
+        // Using the promise and handling it
+        doAsyncTask()
+        .then((result) => {
+            // This function is called when the Promise is resolved (fulfilled)
+            console.log("Promise resolved with Result : ", result);
+        })
+        .catch((error) => {
+            // This function is called when the promise is Rejected
+            console.log("Promise rejected with error : ", error.message);
+        })
+
+    </script>
+    
+</body>
+</html>

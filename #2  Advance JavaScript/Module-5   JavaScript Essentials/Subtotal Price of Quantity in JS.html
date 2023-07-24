@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Subtotal Price of Quantity in JS </title>
+
+    <link rel="stylesheet" href="Subtotal Price Quantity in JS.css">
+
+</head>
+<body>
+    
+    <table border="1" cellspacing="0">
+        <tr class="headings">
+            <td> Product Info </td>
+            <td> Quantity </td>
+            <td> Price (per unit) </td>
+            <td> Price (subtotal) </td>
+            <td>  </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-card">
+                    <img class="product-image" src="https://media.gettyimages.com/id/157472912/photo/ice-cream-composition-on-a-bowl.jpg?s=612x612&w=gi&k=20&c=AniWX1OhaarUxCkgjUoKiA3bKVllK0upCylW6Z0PCMQ=">
+                    <p> Ice-Cream bowl with Lots of Flavours and huge quantity </p>
+                </div>
+            </td>
+            <td> <input type="number" class="quantity" id="bowl-quantity" onkeyup="subtotal()"> </td>
+            <td> <div id="unit-price"> ₹ 199 </div> </td>
+            <td> <div id="subtotal-price-bowl" class="subtotal-price">  </div> </td>
+            <td> <button id="remove-btn" onclick="remove_bowl()"> Remove </button> </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-card">
+                    <img class="product-image" src="https://images.slurrp.com/webstories/wp-content/uploads/2023/05/24175308/pexels-piotr-arnoldes-6025810-scaled.jpg">
+                    <p> Chocolate and Vanilla Flavoured Ice-Cream  </p>
+                </div>
+            </td>
+            <td> <input type="number" class="quantity" id="glass-quantity" onkeyup="subtotal()"> </td>
+            <td> <div id="unit-price"> ₹ 99 </div> </td>
+            <td> <div id="subtotal-price-glass" class="subtotal-price">  </div> </td>
+            <td> <button id="remove-btn" onclick="remove_glass()"> Remove </button> </td>
+        </tr>
+        <tr class="last-row">
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+            <td id="total-amt">  </td>
+            <td>  </td>
+        </tr>
+    </table>
+
+
+    <script src="Subtotal Price of Quantity in JS.js"></script>
+
+</body>
+</html>

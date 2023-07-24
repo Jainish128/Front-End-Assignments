@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> is Array Copied </title>
+</head>
+<body>
+
+    <button onclick="fruits_length()">Get Fruits Length</button>
+
+    <script>
+
+        let fruits = ["Apple", "Pear", "Orange"];       
+        let shoppingCart = fruits;
+        shoppingCart.push("Banana");                    // Push a new value into the "copy"
+
+        // What's in fruits ?
+        // Output : ['Apple', 'Pear', 'Orange', 'Banana']
+
+
+        // Alert for get Fruits Length
+        function fruits_length() 
+        {
+            alert(fruits.length);    
+        }
+
+        console.log(fruits);
+        console.log(fruits.length);
+
+    </script>
+    
+</body>
+</html>

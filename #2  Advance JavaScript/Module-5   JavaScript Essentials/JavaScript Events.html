@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript Events </title>
+</head>
+<body>
+
+    <button id="myButton"> console.log() </button>
+    <hr>
+    <a href="#" id="myLink"> Anchor Link </a>
+    <hr>
+    <button id="writeBtn"> Write Content </button>
+    <div id="output"></div>
+    <hr>
+    <button id="updateButton"> Update Button </button>
+
+    <script>
+
+        /* 
+            avaScript events are used to respond to user interactions or actions that occur on a web page. 
+            You can attach event handlers to specific HTML elements or document-wide events to execute JavaScript code when the events occur. 
+        */
+
+// ---------------------------------------- console.log() using Event ----------------------------------------
+        // We can use an event listener on a button to log a message to the console when the button is clicked.     
+        var myButton = document.getElementById("myButton");
+        myButton.addEventListener("click", function () {
+            console.log("Console.log() Button is Clicked");
+        })   
+
+
+// ---------------------------------------- alert() using Event ----------------------------------------
+        // We can show an alert when a link is clicked.
+
+        var myLink = document.getElementById("myLink");
+        myLink.addEventListener("click", function () {
+            alert("Anchor Link is Clicked.");
+        })
+
+
+// ----------------------------------- document.write() using Event -----------------------------------
+        // We can use an event listener on a button to write content to the document when the button is clicked.
+
+        var writeBtn = document.getElementById("writeBtn");
+        var outputDiv = document.getElementById("output");
+
+        writeBtn.addEventListener("click", function () {
+            outputDiv.innerHTML = "<p> Document.write() button is Clicked. </p>"
+        })
+
+
+// ----------------------------------- innerHTML() using Event -----------------------------------
+        // We can update content when a button is clicked.
+
+        var updateBtn = document.getElementById("updateButton");
+
+        updateBtn.addEventListener("click", function () {
+            outputDiv.innerHTML = "<b> New Content was Clicked. </b>";
+        })
+
+
+    /*
+        In each example, we select the HTML element with JavaScript (‘getElementById’, etc.) and use ‘addEvenListener’ to attach an event handler function to the element. When the specified event (Example : “click”) occurs, the associated function is executed, provided the desired functionality.
+
+        Events are fundamentals for creating interactive and responsive web pages. You can use various types of events, such as click, mouseover, mouseout, keydown, keyup, keypress, submit, blur, etc., to handle user interactions and execute JavaScript code accordingly.
+
+    */
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
