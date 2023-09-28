@@ -1,0 +1,56 @@
+.main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: seagreen;
+}
+
+.sub-main
+{
+    width: 400px;
+    height: 300px;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px 2px black; */
+    /* background-color: rgb(0, 183, 255); */
+    /* background-color: seagreen; */
+    text-align: center;
+    padding-top: 50px;
+}
+
+.sub-main h1
+{
+    color: white;
+}
+
+.sub-main h2
+{
+    font-size: 50px;
+}
+
+.D-I
+{
+    width: 100%;
+    height: 40px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.btns
+{
+    border: none;
+    /* background-color: #222; */
+    background: linear-gradient(to right, rgb(41, 101, 124), rgb(0, 183, 255));
+    color: white;
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+.btns:hover 
+{
+    background: linear-gradient(to left, rgb(41, 101, 124), rgb(0, 183, 255));
+}
