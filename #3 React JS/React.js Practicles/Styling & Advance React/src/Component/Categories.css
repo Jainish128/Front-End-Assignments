@@ -1,0 +1,78 @@
+
+.heading
+{
+    font-size: 33px;
+    font-weight: 500;
+}
+
+.menu ul li
+{
+    list-style: none;
+    font-size: 15px;
+}
+.menu ul li:nth-child(3)
+{
+    color: #1abc9c;
+}
+
+.btns
+{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 15px;
+}
+.btns button
+{
+    width: 40px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    color: #535c68;
+    background-color: #ecf0f1;
+    margin-top: 5px;
+}
+
+
+
+/* .categories
+{
+    border: 1px solid red;
+} */
+.all_cards
+{
+    display: flex;
+    justify-content: space-between;
+
+    /* For Slider */
+    /* scroll-behavior: auto; */
+    /* overflow-y: auto; */
+    /* overscroll-behavior-x: contain; */
+    /* scroll-snap-type: x mandatory; */
+    /* scrollbar-width: none; */
+}
+
+.card
+{
+    width: 9%;
+    height: 140px;
+    /* border: 2px solid red; */
+    text-align: center;
+    /* scroll-snap-align: start; */
+}
+.card img
+{
+    width: 100%;
+    height: 85px;
+    /* background-color: yellowgreen; */
+    padding: 12px 18px;
+}
+.card .name
+{
+    font-weight: 500;
+    font-size: 14px;
+}
+.card .stock
+{
+    font-size: 12px;
+}
+
