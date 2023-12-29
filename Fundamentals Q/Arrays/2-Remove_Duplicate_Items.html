@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-2 || Remove Duplicates Items </title>
+</head>
+<body>
+
+    <h1> Remove Duplicates Items using Array in JavaScript </h1>
+    <hr>
+
+    <p>
+        There are 7 ways to Remove Duplicates Items from Array : <br>
+        (1) Filter method <br>
+        (2) Sets <br>
+        (3) forEach method <br>
+        (4) Reduce method <br>
+        (5) Adding a unique method to the array prototype <br>
+        (6) Underscore JS <br>
+        (7) Removing duplicate objects using the property name <br>
+    </p>
+    <hr>
+    
+    <script>
+
+        var arr = [' Apple', ' Orange', ' Lemon', ' Apple', ' Strawberry', ' Blueberry', ' Banana', ' Orange'];
+
+        // Using Filter for Remove Duplicates -----------------------------------------------------------------------------
+        /*
+            The filter method creates a new array of elements that pass the conditional we provide. And any element that fails or returns false, it won’t be in the filtered array.
+        */
+
+        function removeDuplicates(fruits) 
+        {
+            return fruits.filter((value, index) => fruits.indexOf(value) === index);     
+        }
+        document.write("Remove Duplicates using FILTER : " + removeDuplicates(arr) + "<br>");
+                
+        // Using Filter for Show Duplicates -----------------------------------------------------------------------------
+        function showDuplicates(fruits) 
+        {
+            return fruits.filter((value, index) => fruits.indexOf(value) !== index);     
+        }
+        document.write("Show Duplicates using FILTER : " + showDuplicates(arr) + "<hr>");
+        
+
+
+
+
+        // Using Sets for Show Duplicates -----------------------------------------------------------------------------
+        // Sets are a new object type with ES6 (ES2015) that allows you to create collections of unique values. 
+        
+        function removeDupl2(fruits) 
+        {
+            return [...new Set(fruits)]
+        }
+        document.write("Remove Duplicates using SETs : " + removeDupl2(arr) + "<hr>")
+
+
+
+
+
+        // Using For Each Method for Show Duplicates -----------------------------------------------------------------------------
+        // By using forEach, we can iterate over the elements in the array, and we will push into the new array if it doesn’t exist in the array.
+
+        function removeDupl3(data) 
+        {
+            let unique = [];
+            data.forEach(element => {
+                if (!unique.includes(element)) 
+                {
+                    unique.push(element)    
+                }
+            });    
+            return unique;
+        }
+        document.write("Remove Duplicates using FOR EACH method : " + removeDupl3(arr) + "<hr>")
+
+
+
+
+
+        // Using Reduce Method for Show Duplicates -----------------------------------------------------------------------------
+        /*
+            Reduce is always a bit trickier to understand. 
+            The reduce method is used to reduce the elements of the array and combine them into a final array based on the reducer function that you pass.
+        */
+
+        function removeDupl4(data) 
+        {
+            let unique = data.reduce(function (a, b) 
+            {
+                if (a.indexOf(b) < 0) 
+                {
+                    a.push(b);    
+                }
+                return a;
+            }, []);
+            return unique;    
+        }
+
+        document.write("Remove Duplicates using REDUCE Method : " + removeDupl4(arr) + "<hr>");
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+</body>
+</html>

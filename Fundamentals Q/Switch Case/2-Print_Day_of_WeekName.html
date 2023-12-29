@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-2 || Print Day of Week Name </title>
+</head>
+<body>
+    
+    <h1> Print Day of Week Name using Switch Case </h1>
+    <hr>
+
+    Enter a Number : 
+    <input type="text" id="numberDay">
+    <button id="btn"> Submit </button>
+
+
+
+    <script>
+
+        let clickBtn = document.getElementById("btn");
+        clickBtn.addEventListener("click", function weekDay() 
+        {
+            let day = Number(document.getElementById("numberDay").value);  
+
+            switch (day) 
+            {
+                case 1:
+                    alert("It's Sunday.")
+                    break;
+                case 2:
+                    alert("It's Monday.")
+                    break;
+                case 3:
+                    alert("It's Tuesday.")
+                    break;
+                case 4:
+                    alert("It's Wednesday.")
+                    break;
+                case 5:
+                    alert("It's Thursday.")
+                    break;
+                case 6:
+                    alert("It's Friday.")
+                    break;
+                case 7:
+                    alert("It's Saturday")
+                    break;
+            }
+            
+        })
+
+    </script>
+
+</body>
+</html>

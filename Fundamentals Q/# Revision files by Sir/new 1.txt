@@ -1,0 +1,5 @@
+<!--
+ASCII stands for American Standard Code for Information Interchange.
+
+ASCII is a numeric value that is given to different characters and symbols for computers to store and manipulate. For example, the ASCII value of the letter 'A' is 65.
+-->

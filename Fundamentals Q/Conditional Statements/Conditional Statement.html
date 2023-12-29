@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conditional Statement </title>
+</head>
+
+<body>
+
+    <h1> Conditional Statements </h1>
+    <ul>
+        <li> if </li>
+        <li> if else </li>
+        <li> if elseif else </li>
+        <li> Nested if </li>
+        <li> Switch </li>
+    </ul>
+
+    <!-- +-+-+-+-+-+-+-+-+-+ IF +-+-+-+-+-+-+-+-+-+ -->
+    <hr>
+    <center> Age & VISA check using IF </center>
+    <hr>
+
+    <p id="ageCheck"></p>
+    <p id="visa"></p>
+
+
+
+    <!-- +-+-+-+-+-+-+-+-+-+ IF  ELSE +-+-+-+-+-+-+-+-+-+ -->
+    <hr>
+    <center> Age & Trip Permission check using IF ELSE </center>
+    <hr>
+
+    <div>
+        Check Age for appying License :
+        <input type="number" id="ageInput">
+        <button onclick="ageCheck0()"> Submit </button>
+        <p id="ageCheck2"></p>
+    </div>
+
+    <div>
+        Did your Parents allow for Trip :
+        <input type="radio" name="tripPer" id="tripYes"> Yes
+        <input type="radio" name="tripPer"> No
+        <button onclick="tripParCheck()"> Submit </button>
+        <p id="trip"></p>
+    </div>
+
+
+
+    <!-- +-+-+-+-+-+-+-+-+-+ IF   ELSE IF   ELSE +-+-+-+-+-+-+-+-+-+ -->
+    <hr>
+    <center> Age & Result check using IF &nbsp; ELSE IF &nbsp; ELSE </center>
+    <hr>
+
+    <div>
+        Type your Age :
+        <input type="number" id="getAge">
+        <input type="submit" onclick="age2()">
+        <p id="age2"></p>
+    </div>
+
+    <!-- <table border="1" cellspacing="0" cellpadding="5px"> -->
+    <table style="border: 2px dashed silver; border-radius: 10px; padding: 10px;">
+        <tr>
+            <th> Subject </th>
+            <th> Enter Marks </th>
+        </tr>
+        <tr>
+            <td> <label> English </label> </td>
+            <td> <input type="number" id="eng"> </td>
+        </tr>
+        <tr>
+            <td> <label> Hindi </label> </td>
+            <td> <input type="number" id="hindi"> </td>
+        </tr>
+        <tr>
+            <td> <label> Gujarati </label> </td>
+            <td> <input type="number" id="guj"> </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">
+                <button onclick="result()"> Result </button>
+            </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2" id="total"> &nbsp; </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2" id="per"> &nbsp; </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2" id="grade"> &nbsp; </td>
+        </tr>
+    </table>
+
+    <p id="total"></p>
+    <p id="per"></p>
+    <p id="grade"></p>
+
+
+
+    <!-- +-+-+-+-+-+-+-+-+-+ Nested IF +-+-+-+-+-+-+-+-+-+ -->
+    <hr>
+    <center>  LOGIN validation using NESTED IF </center>
+    <hr>
+
+
+        <table cellpadding="5px">
+            <tr>
+                <th> Email </th>
+                <td> <input type="email" id="email"> </td>
+            </tr>
+            <tr>
+                <th> Password </th>
+                <td> <input type="password" id="pass"> </td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <button onclick="login()"> Login </button>
+                </td>
+            </tr>
+            <tr align="center">
+                <td colspan="2" id="problem" style="color: red;"> 
+                    <span id="success" style="color: green;"></span> 
+                </td>
+            </tr>
+        </table>
+
+
+        <div>
+            <h3> What is the Job Role as per your Technichal Skills :  </h3>
+
+            <select style="padding: 5px 15px;" id="lang">   
+                <option disabled selected> Choose Programming Language </option>
+                <option class="option" value="js"> JavaScript </option>
+                <option class="option" value="php"> PHP </option>
+            </select> 
+            <span id="pl" style="color: red; padding: 0px 20px;"></span>
+            <br><br>
+
+            <select style="padding: 5px 15px;" id="fw">
+                <option disabled selected> Choode Framework </option>
+                <option value="react"> React.js </option>
+                <option value="laravel"> Laravel </option>
+                <!-- <option value="adSql"> Advance SQL </option> -->
+            </select> 
+            <span id="fw2" style="color: red; padding: 0px 20px;"></span>
+            <br><br>
+
+            <button style="padding: 5px 20px;" onclick="jobRole()"> 
+                See JobRole 
+            </button>
+            <span id="jr" style="color: green; padding: 0 25px;"></span>
+        </div>
+
+        
+        <!-- +-+-+-+-+-+-+-+-+-+ Switch +-+-+-+-+-+-+-+-+-+ -->
+        <hr>
+        <center>  Day and Festival using Switch </center>
+        <hr> 
+
+        <!-- Day -->
+        <p id="day"></p>
+
+        <!-- Check Grade by Entering Percentage -->
+        <p id="festival"> </p>
+
+
+    <script src="if.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!-- +-+-+-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+-+-+ -->
+
+<!-- 
+    ascii.code.com = charCodeAt() / codePane()
+    programiz.com
+    w3resource.com
+    educative.com
+    freeCodeCamp.com
+    stackOverflow.com
+ -->

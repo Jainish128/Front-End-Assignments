@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-2 || Find Greatest Among Three Numbers. </title>
+</head>
+<body>
+
+    <h1> Find Greatest Among Three Numbers. </h1>
+    <hr>
+    <!--
+        a, b, c :  
+        a > b
+        a > c
+        b > a
+        b > c
+        c > a
+        c > b
+        a > b && c
+        b > a && c
+        c > a && b
+     -->
+
+        <label for="first"> Enter First Value :  </label>
+        <input type="number" id="first"> 
+        <br><br>
+        <label for="second"> Enter Second Value :  </label>
+        <input type="number" id="second"> 
+        <br><br>
+        <label for="three"> Enter Three Value :  </label>
+        <input type="number" id="three"> 
+        <br><br>
+        <button onclick="GreatestNum()"> Check Greatest Number </button> 
+        <p id="result"></p>
+
+
+     <script>
+
+        // var a = document.getElementById("first").value;
+        // var b = document.getElementById("second").value;
+        // var b = document.getElementById("three").value;
+        var result = document.getElementById("result");
+
+        var a = 10;
+        var b = 20;
+        var c = 30;
+
+        function GreatestNum() {
+
+            if (a>b && a>c) 
+            {
+                result.innerHTML = "A is Greater than B or C.";
+            }
+            else if (b>a && b>c) 
+            {
+                result.innerHTML = "B is Greater than A or C.";
+            }
+            else if (c>a && c>b) 
+            {
+                result.innerHTML = "C is Greater than A or B.";
+            }
+            else
+            {
+                result.innerHTML = "All are Equal."
+            }
+        };
+        
+        function check0() 
+        {
+            document.write(Math.max(a,b,c) + "is the Greatest Number.");    
+        }
+
+     </script>
+
+
+    
+</body>
+</html>

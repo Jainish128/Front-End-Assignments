@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-3 || Sum of Natural Number using While Loop </title>
+</head>
+<body>
+
+    <h1> Sum of Natural Number using While Loop </h1>
+    <hr>
+    <p>
+        Number = 4 <br>
+        Answer : 1 + 2 + 3 + 4 = 10
+    </p>
+
+
+    <input type="number" id="num">
+    <button onclick="sum()"> Sum </button>
+    <p id="ans"></p>
+
+
+    <script>
+
+        function sum() 
+        {
+            var number = document.getElementById("num").value;    
+
+            let sum = 0; 
+            let i = 1;
+
+            while (i <= number) 
+            {
+                sum += i;       // sum = sum + i;
+                i++    
+            }
+
+            document.getElementById("ans").innerHTML = `The Sum of Natural ${number} Number : ${sum}`;
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

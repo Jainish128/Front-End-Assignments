@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-6 || GCD of Two Numbers </title>
+</head>
+<body>
+    
+    <h1> Find GCD of Two Numbers using Loops </h1>
+    <hr>
+    <p> GCD : Greatest Common Divisor </p>
+
+    <script>
+
+        function gcd(a,b) 
+        {
+            var Divisor;
+            
+            // Looping from 1 to A and B
+            for (let i=1; i <= a && i <= b; i++) 
+            {
+                if ( a % i == 0 && b % i == 0 ) 
+                {
+                    Divisor = i;
+                }
+                
+            }
+            return Divisor;
+        }
+
+        var result = gcd(20, 30);
+        document.write( "GCD : " + result );
+        
+
+    </script>
+
+</body>
+</html>

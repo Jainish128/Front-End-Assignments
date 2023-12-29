@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-6 || Check Prime or Armstrong Number </title>
+</head>
+<body>
+
+    <h1> Check Prime or Armstrong Number </h1>
+    <hr>
+
+    <script>
+
+        // Progarmme to Check an Armstrong number of n digits
+
+        // Take an Input
+        const number = prompt("Enter a Positive Integer : ");
+        const numberOfDigits = number.length;
+        let sum = 0;
+
+        // Create a temporary variable
+        let temp = number;
+
+        while (temp > 0) 
+        {
+            let remainder = temp % 10;
+
+            sum += remainder ** numberOfDigits;
+
+            // Removing Last Digit from the Number.
+            temp = parseInt(temp / 10);         // Convert Float into Integer.
+        }
+
+        if (sum == number) 
+        {
+            document.write(`${number} is an Armstrong Number.`);    
+        }
+        else
+        {
+            document.write(`${number} is not an Armstrong Number.`);
+        }
+
+    </script>
+
+    
+</body>
+</html>

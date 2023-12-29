@@ -1,0 +1,36 @@
+
+<script>
+
+// no vowels in string
+
+
+// by function
+const str = 'coding beauty';
+const noVowels = str.replace(/[aeiou]/gi, '');
+document.write(noVowels + "<br>"); // cdng 
+
+
+// by manual
+function remVowel(str) 
+{ 
+	let al = [ 'a', 'e', 'i', 'o', 'u','A', 'E', 'I', 'O', 'U' ]; 
+	let NoVowel = ""; 
+	
+	for(let i = 0; i < str.length; i++) 
+	{ 
+		
+		switch(true)
+		{
+			case (!al.includes(str[i])) : 
+			NoVowel += str[i]; 
+			break;
+		}		
+	} 
+	document.write(NoVowel); 
+} 
+remVowel("GeeeksforGeeks"); 
+
+</script> 
+
+
+</script>

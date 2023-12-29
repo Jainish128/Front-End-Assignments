@@ -1,0 +1,61 @@
+<!--
+
+Gross Salary = Basic + HRA + DA + Allow – PF
+
+Here, HRA = 20% of Basic 
+DA = 50% of basic 
+PF = 11% of basic
+
+
+Allow = 1700 if grade = ‘A’ 
+Allow = 1500 if grade = ‘B’ 
+Allow = 1300 if grade = ‘C’ 
+
+
+-->
+
+<script>
+
+// JavaScript program for
+// the above approach
+
+// Function to calculate the
+// salary of the person
+
+function computeSalary(basic,grade)
+{
+	let allowance;
+	let hra, da, pf;
+	
+	hra = 0.2 * basic;
+	da = 0.5 * basic;
+	pf = 0.11 * basic;
+	
+	// Condition to compute the
+	// allowance for the person
+	if (grade == 'A') 
+	{
+		allowance = 1700.0;
+	}
+	else if (grade == 'B')
+	{
+		allowance = 1500.0;
+	}
+	else
+	{
+		allowance = 1300.0;
+	}
+	
+	let gross;
+	
+	// Calculate gross salary
+	gross = Math.round(basic + hra + da +
+						allowance - pf);
+							
+	return gross;
+}
+
+	// Function call
+	document.write(computeSalary(20000, 'A'));
+
+</script>

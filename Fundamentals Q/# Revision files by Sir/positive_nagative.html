@@ -1,0 +1,31 @@
+<!--
+The Math.sign() method retuns whether a number is negative, positive or zero.
+
+If the number is positive, this method returns 1.
+If the number is negative, it returns -1.
+If the number is zero, it returns 0.
+-->
+
+<script>
+	
+	const result=(number)=>{
+	
+		var ans=Math.sign(number);
+		if(ans==1)
+		{
+			document.write(number + " : is = Postive  <br>");
+		}
+		else if(ans==-1)
+		{
+			document.write(number + " : is = Nagative <br>");
+		}
+		else
+		{
+			document.write(number + " : is = Zero <br>");
+		}
+	}
+	
+	result(20);
+	result(-10);
+	result(0);
+</script>

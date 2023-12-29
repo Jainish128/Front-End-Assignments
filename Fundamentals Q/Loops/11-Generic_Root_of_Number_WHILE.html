@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-11 || Generic Root of a Number </title>
+</head>
+<body>
+
+    <h1> Generic Root of a Number using While loop </h1>
+    <hr>
+    <p>
+        Generic Root : of a number is sum of all the digits of the number until we get a single-digit output. <br>
+        Input number is 12345 <br> 
+        1 + 2 + 3 + 4 + 5 = 15 <br>
+        9 + 8 = 17
+    </p>
+    <hr>
+
+    Enter Number : 
+    <input type="number" id="number">
+    <br><br>
+    Enter Root : 
+    <input type="number" id="root">
+    <br><br>
+    <button onclick="Generic_Root()"> Generic Root </button>
+    <p id="result"></p>
+
+    <script>
+
+        function Generic_Root() 
+        {
+            var number = document.getElementById("number").value;
+            var root = document.getElementById("root").value;
+            let sum = 0;
+            let temp = number;
+
+            while (temp > 0) 
+            {
+                sum += temp % 10;
+                temp = Math.floor(temp / 10);    
+            }
+            if (sum > 9) 
+            {
+                return Generic_Root(sum, root);    
+            }
+            // return sum;
+
+            document.getElementById("result").innerHTML = sum;
+        }
+
+    </script>
+
+</body>
+</html>

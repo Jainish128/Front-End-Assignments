@@ -1,0 +1,79 @@
+<script>
+//Half Pyramid of *
+
+for (var i = 1; i <= 5; i++) 
+   {
+		for(var j=1;j<=i;j++)
+		{
+			document.write("* ");
+		}
+		document.write("</br>");
+   }
+   
+   
+   
+for (var i = 1; i <= 5; i++) 
+   {
+		for(var j=1;j<=i;j++)
+		{
+			document.write(" " + j);
+		}
+		document.write("</br>");
+   } 
+
+// for alpha 
+
+let string = "";
+// External loop
+for (let i = 1; i <= 5; i++) {
+  // printing characters
+  for (let j = 0; j < i; j++) {
+    string += String.fromCharCode(j + 65);
+  }
+  string += "<br>";
+}
+document.write(string);
+
+//=========================================================
+//Inverted half pyramid of *
+
+
+for (var i = 1; i <= 5; i++) 
+   {
+		for(var j=5;j>=i;j--)
+		{
+			document.write("* ");
+		}
+		document.write("</br>");
+   }
+
+for (var i = 1; i <= 5; i++) 
+   {
+		for(var j=5;j>=i;j--)
+		{
+			document.write(" " + j);
+		}
+		document.write("</br>");
+   }   
+   
+   
+// Full Pyramid of *
+
+
+for (let i = 1; i <= 5; i++) { 
+    let str = ''; 
+    let count = 1; 
+    for (let j = 1; j <= 2 * 5; ++j) { 
+        if (i + j >= 5 + 1 && (i >= j - 5 + 1)) { 
+            // Add a space after each number 
+            str += count.toString() + ' '; 
+            count++; 
+        } else { 
+            // Add two spaces for the gap 
+            str += '  '; 
+        } 
+    } 
+  
+    console.log(str); 
+}
+</script>

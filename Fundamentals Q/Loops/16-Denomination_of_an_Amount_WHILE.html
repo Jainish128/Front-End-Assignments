@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-16 || Denomination of an Amount | WHILE loop </title>
+</head>
+<body>
+
+    <h1> Denomination of an Amount using WHILE Loop </h1>
+    <hr>
+
+    <input type="number" id="money">
+    <button onclick="denomination()"> Denomination </button>
+    <p id="res"></p>
+
+    <script>
+
+        function denomination() 
+        {
+            // var deposit = 12345;            //  The Deposit Amount
+            var deposit = document.getElementById("money").value;
+            const denominations = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1];     // The Denominations of Currency notes
+            var i = 0;      // The Index of the Denomination
+            var change = [];        // The Array of Change
+            
+            
+            // While there is still Money to be Deposited.
+            while (deposit > 0) 
+            {
+                // Get the Current Denomination
+                var denomination = denominations[i];
+
+                // If the deposit is greater than or Equal to the Current Denomination.
+                if (deposit >= denomination) 
+                {
+                    // Add the current denomination to the change Array
+                    change.push(denomination);
+                    
+                    // Substract the current denomination from the Deposit.
+                    deposit -= denomination;
+                }
+                else
+                {
+                    // Increment the Index of the Denomination
+                    i++;
+                }
+            }
+        
+            document.getElementById("res").innerHTML = change.join("<br>");
+        }
+
+    </script>
+    
+</body>
+</html>

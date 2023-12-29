@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-6 </title>
+</head>
+<body>
+
+    <input type="text" id="text">
+    <button onclick="isVowel()"> Check </button>
+    <p id="ans"></p>
+
+    <script>
+
+        function isVowel() 
+        {
+            var text = document.getElementById("text").value;
+
+            if (/[aeiou]/.test(text)) 
+            {
+                ans.innerHTML = "This Character is Vowel." 
+            }    
+            else
+            {
+                ans.innerHTML = "This Character is not Vowel." 
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

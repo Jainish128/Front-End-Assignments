@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-4 || Greater Between Two Number </title>
+</head>
+<body>
+
+    <h1> Finding Greater Between Two Number </h1>
+    <hr>
+
+    Enter A Value : 
+    <input type="number" id="first"> <br><br>
+    Enter B Value : 
+    <input type="number" id="second"> <br><br>
+    <button onclick="greater()"> Answer </button>
+    <p id="demo"></p>
+    
+    <script>
+
+        // var a = 10;
+        // var b = 20;
+
+        
+        function greater() 
+        {
+            var a = document.getElementById("first");
+            var b = document.getElementById("second");
+
+            if (a.value > b.value) 
+            {
+                document.getElementById("demo").innerHTML = 'A is Greater than B.';    
+            }
+            else
+            {
+                document.getElementById("demo").innerHTML = 'B is Greater than A.';    
+            }
+
+        }
+
+       
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-11 || Find Character is Vowel or Not </title>
+</head>
+<body>
+
+    <h1> Find Character is Vowel or Not </h1>
+    <hr>
+
+    <script>
+
+        function isVowel(character) 
+        {
+            if (character == "a" || "i" || "o" || "u" || "e") 
+            {
+                return true;
+            }    
+            else
+            {
+                return false;
+            }
+        }
+
+        // For Each element of the Array (Character in the String),
+        // If it is a Vowel, and it's the First Element, Returns the String + way.
+
+        // Without RegEx : 
+        function isVowel2(char) 
+        {
+            if (char.length == 1) 
+            {
+                var vowels = new Array("a", "i", "o", "u", "e");
+                var isVowel = false;
+                
+                for (j in vowels) {
+                    if (vowels[j] == char) 
+                    {
+                        isVowel = true;    
+                    }
+                }
+                return isVowel;
+            }    
+        }
+
+        document.write(isVowel2("i"));
+
+        // With RegEx : 
+
+        function isVowel_RegEx(char) 
+        {
+            if (char.length == 1) 
+            {
+                return /[aeiou]/.test(char);  
+            }    
+        }
+        document.write(isVowel_RegEx("k"));
+
+    </script>
+    
+</body>
+</html>

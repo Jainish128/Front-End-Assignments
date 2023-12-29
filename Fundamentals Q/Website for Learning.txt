@@ -1,0 +1,14 @@
+<!-- 
+    ascii.code.com = charCodeAt() / codePane()
+    
+    programiz.com
+    w3resource.com
+    educative.com
+    freeCodeCamp.com
+    stackOverflow.com
+
+    geeksforgeeks.com           // Main
+    
+
+
+ -->

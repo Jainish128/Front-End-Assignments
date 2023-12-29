@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-4 || Find Percentage </title>
+</head>
+<body>
+
+    <h1> Find Percentage </h1>
+
+    <form action="#" onsubmit="return result()" >
+
+        <table cellspacing="0" cellpadding="5px">
+            <tr>
+                <th> Subjects </th>
+                <th> Marks </th>
+            </tr>
+            <tr>
+                <td> English </td>
+                <td> <input type="number" id="eng" required min="0" max="100"> </td>
+            </tr>
+            <tr>
+                <td> Gujarati </td>
+                <td> <input type="number" id="guj" required min="0" max="100"> </td>
+            </tr>
+            <tr>
+                <td> Hindi </td>
+                <td> <input type="number" id="hindi" required min="0" max="100"> </td>
+            </tr>
+            <tr>
+                <td> Account </td>
+                <td> <input type="number" id="acc" required min="0" max="100"> </td>
+            </tr>
+            <tr>
+                <td> Stat </td>
+                <td> <input type="number" id="stat" required min="0" max="100"> </td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <button type="submit"> Result </button>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <h2 id="total_marks"></h2>
+    <h2 id="per"></h2>
+    <h2 id="grade"></h2>
+
+
+
+    <script>
+
+        function result() 
+        {
+
+            var eng = document.getElementById("eng").value;  
+            var guj = document.getElementById("guj").value;  
+            var hindi = document.getElementById("hindi").value;  
+            var acc = document.getElementById("acc").value;  
+            var stat = document.getElementById("stat").value;  
+
+            // Total Marks
+            var total;
+            total = +eng + +guj + +hindi + +acc + +stat;
+            document.getElementById("total_marks").innerHTML = "Total Marks : " + total;
+
+            // Percentage
+            var per; 
+            per = (total/500) * 100;
+            document.getElementById("per").innerHTML = "Percentage : " + per.toFixed(2) + "%";
+
+            if (per >= 90) 
+            {
+                document.getElementById("grade").innerHTML = "Grade : A";    
+            }
+            else if (per >= 75) 
+            {
+                document.getElementById("grade").innerHTML = "Grade : B";    
+            }
+            else if (per >= 60) 
+            {
+                document.getElementById("grade").innerHTML = "Grade : C";    
+            }
+            else if (per >= 40) 
+            {
+                document.getElementById("grade").innerHTML = "Grade : D";    
+            }
+            else
+            {
+                document.getElementById("grade").innerHTML = "FAIL";    
+            }
+
+        }
+
+    </script>
+
+
+</body>
+</html>

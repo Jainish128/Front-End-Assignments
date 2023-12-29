@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gross Salary </title>
+</head>
+<body>
+
+    <h1> Gross Salary </h1>
+    <hr>
+    
+    <p>
+        Formula : &nbsp;
+        Gross Salary = Basic + HRA + DA + Allow – PF
+        <br><br>
+        HRA = 20% of Basic <br> 
+        DA = 50% of basic <br>
+        PF = 11% of basic <br><br>
+
+        Allow = 2500 if grade = ‘A’ <br>
+        Allow = 2000 if grade = ‘B’ <br>
+        Allow = 1500 if grade = Any <br><br>
+    </p>
+
+
+    <script>
+
+
+        // JavaScript programme for above approch
+        // Function to calculate the Salary of the Employee / Person.
+
+        function gross_salary(basic, grade) 
+        {
+            let allowance; 
+            let hra, da, pf;
+            
+            hra = 0.2 * basic;
+            da = 0.5 * basic;
+            pf = 0.11 * basic;
+            
+            // Condition to compute the Allowance for the Employee / Person.
+            if (grade == 'A') 
+            {
+                allowance = 2500;
+            }
+            else if (grdae == 'B') 
+            {
+                allowance = 2000;    
+            }
+            else
+            {
+                allowance = 1500;
+            }
+
+            document.write(" &nbsp;&nbsp; Basic Salary : " + basic + "<br>");
+            document.write(" + HRA : " + hra + "<br>");
+            document.write(" + DA : " + da + "<br>");
+            document.write(" + Allowance : " + allowance + "<br>");
+            document.write(" - PF : " + pf + "<br>");
+
+            // Calculate Gross Salary
+            let gross = Math.round(basic + hra + da + allowance - pf);
+            return gross;
+        }
+        
+        // Function Call
+        document.write( " = Gross Salary : " + gross_salary(20000, 'A'));
+        
+
+
+    </script>
+    
+</body>
+</html>

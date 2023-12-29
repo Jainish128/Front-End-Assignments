@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-14 || Check a Number is Divisible by 11 Using (Vedic Maths) </title>
+</head>
+<body>
+
+    <h1> Check Whether a Number Is Divisible by 11 Using (Vedic Maths) </h1>
+    <hr>
+
+    <!-- <input type="number" id="number"> -->
+    <!-- <button onclick="isDivisibleBy11()"> Check Divisible by 11 </button> -->
+    <p id="res"></p>
+
+    <script>
+
+        // Function to check if a number is divisible by 11 using Vedic Maths
+        function isDivisibleBy11(number) 
+        {
+            // Ensure the Input number is a Positive Integer
+            if (number < 0 || !Number.isInteger(number)) 
+            {
+                return false;    
+            }    
+
+            let sum = 0;
+            let isSubtract = true;          // Start with Subtraction.
+
+            while (number > 0) 
+            {
+                if (isSubtract) 
+                {
+                    sum -= number % 10;    
+                }    
+                else
+                {
+                    sum += number % 10;
+                }
+
+                number = Math.floor(number / 10);
+                isSubtract = !isSubtract;
+            }
+
+            return sum % 11 === 0;
+
+        };
+
+        // var number_to_check = document.getElementById("number").value;
+        var number_to_check = 121;
+
+        if (isDivisibleBy11(number_to_check)) 
+        {
+            document.getElementById("res").innerHTML = `${number_to_check} is Divisible by 11 using Vedic Maths.`;    
+        }
+        else
+        {
+            document.getElementById("res").innerHTML = `${number_to_check} is not Divisible by 11 using Vedic Maths.`;    
+        }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Find Area of Triangle given Base & Height </title>
+
+    <style>
+        * { font-family: monospace; }
+    </style>
+
+</head>
+<body style="text-align: center;">
+
+    <h1> Find Area of Triangle given Base & Height </h1>
+    <hr>
+    
+    <h2 style="color: green;"> Find Area of Triangle </h2>
+
+    <label for="side1"> Enter the Value of Side 1 : </label>
+    <input type="number" id="side1" placeholder="Enter Value of Side 1">
+    <br><br>
+
+    <label for="side2"> Enter the Value of Side 1 : </label>
+    <input type="number" id="side2" placeholder="Enter Value of Side 2">
+    <br><br>
+
+    <label for="side3"> Enter the Value of Side 1 : </label>
+    <input type="number" id="side3" placeholder="Enter Value of Side 3">
+    <br><br>
+
+    <button onclick="Area()"> Get Area of Triangle </button>
+    
+    <p>
+        Area of Triangle : <span id="result" style="color: orangered;"></span>
+    </p>
+
+
+
+
+    <script>
+
+        // Formula
+        // s = (a+b+c)/2
+        // area = √( s(s-a) * (s-b) * (s-c) )
+
+        function Area() 
+        {
+            var side1 = document.getElementById("side1").value;    
+            var side2 = document.getElementById("side2").value;    
+            var side3 = document.getElementById("side3").value;    
+            var formula = (side1 + side2 + side3) / 2;
+
+            var area = Math.sqrt( formula*(formula - side1) * (formula - side2) * (formula - side3) );
+            document.getElementById("result").innerHTML = area.toFixed(2);
+        }
+
+
+    </script>
+    
+</body>
+</html>

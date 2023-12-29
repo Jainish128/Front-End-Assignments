@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-1 || Reverse a Number using FOR Loops. </title>
+</head>
+<body>
+
+    <h1> Reverse a Number using FOR Loop </h1>
+    <hr>
+    <p id="result"></p>
+
+    <script>
+
+        function reverseNumber(number) 
+        {
+            // Convert the Number to a String.
+            const numStr = number.toString();
+
+            // Initialize a String to store the reversed number
+            let reversedStr = "";
+
+            // Iterate through the charactres of the original string in Reverse number.
+            for (let i = numStr.length - 1; i >= 0; i--) 
+            {
+                reversedStr += numStr[i];    
+            }
+
+            // Convert the reversed stringback to number
+            const reverseNum = parseInt(reversedStr, 10);
+
+            return reverseNum;
+        }
+
+        const originalNumber = 12345;
+        const reversed = reverseNumber(originalNumber);
+        document.getElementById("result").innerHTML = " Orignal Number :  " + originalNumber + "<br>" + " Reversed Number :  " + reversed;
+
+
+    </script>
+
+    
+</body>
+</html>

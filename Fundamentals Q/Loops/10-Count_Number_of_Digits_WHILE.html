@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-10 || Count Number of Digits | While Loop </title>
+</head>
+<body>
+
+    <h1> Count the Number of Digits of an Integer Using the While Loop. </h1>
+    <hr>
+    <p>
+        Count the Number of Digits : <br>
+        Example : Digits of an Integer : 1234567890 <br>
+        Counted Numbers of Digits = 10
+    </p>
+    <hr>
+
+    <input type="number" id="digit">
+    <button onclick="number_of_digits()"> Check Numbers </button>
+    <p id="ans"></p>
+
+    <script>
+
+        function number_of_digits() 
+        {
+            var digit = document.getElementById("digit").value;
+            let result = 0;
+
+            while (digit > 0) 
+            {
+                digit = Math.floor(digit / 10);
+                result++;    
+            }
+
+            document.getElementById("ans").innerHTML = result;
+        }
+
+    </script>
+    
+</body>
+</html>

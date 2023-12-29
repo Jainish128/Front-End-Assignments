@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-1 || Convert Celsius to Fahrenheit And Vice Versa </title>
+</head>
+<body>
+
+    <h1> Convert Celsius to Fahrenheit And Vice Versa </h1>
+    <hr>
+    <p>
+        Formula : <br>
+        Fahrenheit = celsius * 1.8 + 32 <br>
+        Celsius = (Fahrenheit - 32) / 1.8 <br>
+    </p>
+    <hr>
+
+
+    <script>
+
+        function convertTemp(temp, type) 
+        {
+            switch (type) 
+            {
+                case "celsius":
+                    return (temp * 9 / 5) + 32;
+                    // break;
+
+                case "fahrenheit":
+                    return (temp - 32) * 5 / 9;
+
+                default:
+                    throw new Error("Invalid Temperature type");
+                    // break;
+            }    
+        }
+
+        // console.log(convertTemp(20, "celsius"));
+        // console.log(convertTemp(77, "fahrenheit"));
+        
+        document.write(convertTemp(20, "celsius"));
+        document.write("<br>");
+        document.write(convertTemp(77, "fahrenheit"));
+
+    </script>
+    
+</body>
+</html>

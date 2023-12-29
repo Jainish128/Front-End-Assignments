@@ -1,0 +1,193 @@
+<script>
+	// reverse order
+	/*
+	var i=10;
+	while(i>=1)
+	{
+		document.write(i + "</br>");
+		i--;
+	}
+	
+	//=====================================================================
+	*/
+	
+	// armstrong Let's take another example of 1634.
+	//153 = 1*1*1 + 5*5*5 + 3*3*3    1 + 125 +27  = 153
+	//1634 = 1*1*1*1 + 6*6*6*6* + 3*3*3*3 + 4*4*4*4
+	
+	/*
+	const num = prompt("Enter an integer");
+	const digits = num.length;
+	var sum = 0;
+	var temp = num;
+
+	while (temp > 0) 
+	{
+
+		var remainder = temp % 10;
+		sum += remainder ** digits;
+		// removing the last digit from the number
+		
+		temp = parseInt(temp / 10); // convert float into integer
+	}
+
+	if (sum == num)
+	{	
+		document.write(num + " is an Armstrong number");
+	}
+	else
+	{	
+		document.write(num + " is not an Armstrong number");
+	}
+	//=====================================================================
+	*/
+	
+	
+	//3.	Calculate the Sum of Natural Numbers Using the While Loop
+	/*
+	const number = prompt("Enter an integer");
+
+	let sum = 0, i = 1;
+
+	while(i <= number){
+	  
+	  sum += i;
+	  i++
+	}
+
+	document.write('The sum of natural numbers:', sum);
+	
+	*/
+	
+	//=====================================================================
+	
+	//4.	Write a C Program to Print the Multiplication Table of N
+	
+	/*
+	const number = prompt("Enter an integer");
+	const range = prompt("Enter an integer");
+
+	for(let i = 1; i <= range; i++) 
+	{
+		var res = i * number;
+		document.write(number +" * "+ i + " = " + res + "<br>");
+	}
+
+	*/
+	
+	//=====================================================================
+	
+	//Fibonacci Sequence A fibonacci sequence is written as: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+	
+	/*
+	const number = parseInt(prompt('Enter the number of terms: '));
+	let n1 = 0, n2 = 1, nextTerm;
+
+	for (let i = 1; i <= number; i++) {
+		document.write(n1 + "<br>");
+		nextTerm = n1 + n2;
+		n1 = n2;
+		n2 = nextTerm;
+	}
+	*/
+	
+	//=====================================================================
+	
+	
+	//The HCF or GCD of two integers is the largest integer that can exactly divide both numbers (without a remainder).
+
+/*
+	function gcd(a, b) 
+	{
+		while(a != b)
+		{
+			if(a > b) 
+			{
+				a=a-b;
+			}
+			else 
+			{
+				b=b-a;
+			}
+		}
+		return a;
+	}
+
+var result = gcd(50, 20);
+document.write("GCD :" + result); // output: 10
+
+*/
+
+// LCM (Least Common Multiple) of two numbers is the smallest positive integer that is divisible by both numbers without leaving a remainder. It’s a common multiple of the numbers.
+/*
+function findLCM(a, b) 
+{
+    let lar = Math.max(a, b);
+    let small = Math.min(a, b);
+	
+    for (i = lar; ; i += lar) 
+	{
+        if (i % small == 0)
+		{
+            return i;
+		}
+    }
+};
+document.write("LCM :" + findLCM(50, 20));		
+*/
+
+
+//A palindrome is a value that reads the same from backward or forward.
+
+/*
+function isPalindrome(str) 
+{ 
+	var j = str.length-1
+	
+	for(var i=0; i<str.length/2; i++)
+	{ 
+		if(str[i]!=str[j])
+		{ 
+			return false;			
+		} 
+		
+		j--; 
+	} 
+	return true; 
+} 
+
+var str1 = "pop"; 
+var str2 = "nitin"; 
+var str3 = "pop"; 
+
+document.write(isPalindrome(str1)); 
+document.write(isPalindrome(str2)); 
+document.write(isPalindrome(str3));
+
+*/
+
+/*
+
+function isPalindrome(str) 
+{ 
+    var rev=str.split("").reverse().join(""); 
+  
+    if(rev == str){ 
+        return true
+    } 
+    return false
+                 
+} 
+var str1 = "pop"; 
+var str2 = "nitin"; 
+var str3 = "pop"; 
+
+document.write(isPalindrome(str1)); 
+document.write(isPalindrome(str2)); 
+document.write(isPalindrome(str3));
+
+*/
+
+</script>
+
+

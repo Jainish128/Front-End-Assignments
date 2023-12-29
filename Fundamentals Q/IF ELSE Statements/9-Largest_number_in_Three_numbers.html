@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-9 || Largest of Three Numbers in C Using Nested if Else </title>
+</head>
+<body>
+
+    <h1> Largest of Three Numbers in JavaScript Using Nested if Else </h1>
+    <hr>
+
+    Enter First Number : 
+    <input type="number" id="first">
+    <br><br>
+
+    Enter Second Number : 
+    <input type="number" id="second">
+    <br><br>
+
+    Enter Third Number : 
+    <input type="number" id="third">
+    <br><br>
+
+    <button onclick="largest()"> Largest Number </button>
+
+    <p id="result"></p>
+
+
+    <script>
+
+        function largest() 
+        {
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var c = document.getElementById("third").value;
+            var result = document.getElementById("result");
+            var j;
+
+            if (a>b) 
+            {
+                if (a>=c) 
+                {
+                    j=a;    
+                }    
+                else
+                {
+                    j=c;
+                }
+            }
+            else
+            {
+                if (b>=c) 
+                {
+                    j=b;    
+                } 
+                else 
+                {
+                    j=c;    
+                }
+
+                result.innerHTML = `The Largest number is : ${j}`;
+
+            }
+            
+
+
+        }
+
+        
+
+    </script>
+
+
+
+</body>
+</html>

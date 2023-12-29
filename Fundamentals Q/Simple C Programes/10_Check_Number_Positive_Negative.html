@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-10 || Check Number is Positive or Negative </title>
+</head>
+<body>
+
+    <h1> Check Number is Positive or Negative </h1>
+    <hr>
+
+    <p>
+        The Math.sign() method retuns whether a number is negative, positive or zero. <br>
+        If the number is positive, this method returns 1. <br>
+        If the number is negative, it returns -1. <br>
+        If the number is zero, it returns 0.
+    </p>
+    <hr>
+
+    <script>
+
+        const result = (number) => {
+            var ans = Math.sign(number);
+            if (ans == 1) 
+            {
+                document.write(number + " : is Positive <br>");    
+            }
+            else if (ans == -1) 
+            {
+                document.write(number + " : is Negative <br>");    
+            }
+            else
+            {
+                document.write(number + " : is Zero <br>");
+            }
+        }
+
+        result(10);
+        result(-10);
+        result(0);
+
+    </script>
+    
+</body>
+</html>

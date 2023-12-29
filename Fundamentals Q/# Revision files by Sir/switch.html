@@ -1,0 +1,40 @@
+
+<script>
+
+
+let result;
+
+
+const operator = prompt('Enter operator ( either +, -, * or / ): ');
+
+// take the operand input
+const number1 = parseFloat(prompt('Enter first number: '));
+const number2 = parseFloat(prompt('Enter second number: '));
+
+switch(operator) {
+		case '+':
+        result = number1 + number2;
+        document.write(`${number1} + ${number2} = ${result}`);
+        break;
+
+    case '-':
+         result = number1 - number2;
+        document.write(`${number1} - ${number2} = ${result}`);
+        break;
+
+    case '*':
+         result = number1 * number2;
+        document.write(`${number1} * ${number2} = ${result}`);
+        break;
+
+    case '/':
+         result = number1 / number2;
+        document.write(`${number1} / ${number2} = ${result}`);
+        break;
+
+		default:
+        document.write('Invalid operator');
+        break;
+}
+
+</script>

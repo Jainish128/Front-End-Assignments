@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-5 || Radius Circumference </title>
+</head>
+<body>
+
+    <h1> Finding Radius Circumference using Switch Case </h1>
+    <hr>
+
+    <script>
+
+        // Function to calculate the Circumference of a Circle based on its Radius.
+        function Circumference(radius) 
+        {
+            let circumference;
+            
+            switch (true) 
+            {
+                case radius > 0:
+                    circumference = 2 * Math.PI * radius;  
+                    break;
+            
+                default:
+                    circumference = 0;
+                    // break;
+            }
+            return circumference;
+        }
+
+        // Test the function with a Radius
+        const radius = 5;       // We can change this value to test with a different radius.
+        const circle_Circumference = Circumference(radius);
+
+        if (circle_Circumference === 0) 
+        {
+            document.write('Invalid Raduis. Please enter a Positive value.');  
+        }
+        else
+        {
+            document.write(`The Circumference of the Circle with a Radius of ${radius} = ${circle_Circumference}`);
+        }
+
+    </script>
+
+
+    
+</body>
+</html>

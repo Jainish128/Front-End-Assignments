@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-5 || Fibonacci Series Programme using DO While Loop </title>
+</head>
+<body>
+
+    <h1> Fibonacci Series Program in JavaScript Using DO While Loop. </h1>
+    <hr>
+    <p id="ans"></p>
+
+    <script>
+
+        var fbnci = [0,1];
+        var i = 2;
+
+        do 
+        {
+            // Add the Fibonacci sequence : Add previous to one before previous.
+            fbnci[i] = fbnci[i-2] + fbnci[i-1];
+            // document.getElementById("ans").innerHTML = fbnci[i];
+            console.log(fbnci[i]);
+            fbnci[i]++;
+        } 
+        while (fbnci[i] < 100);
+
+    </script>
+
+</body>
+</html>

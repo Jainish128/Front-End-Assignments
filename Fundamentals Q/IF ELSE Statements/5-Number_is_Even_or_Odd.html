@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-5 || Check Number is Even or Odd </title>
+</head>
+<body>
+
+    <h1> Check Number is Even or Odd </h1>
+    <hr>
+
+    <input type="number" id="input">
+    <button onclick="Even_Odd()"> Check EVEN or ODD </button>
+    <p id="result"></p>
+    
+    <!-- 
+        Formula of Even or Odd number :
+        number % 2 == 0
+     -->
+    
+    <script>
+
+        var input = document.getElementById("input"); 
+
+        function Even_Odd() 
+        {
+            if (input.value % 2 == 0) 
+            {
+                document.getElementById("result").innerHTML = `${input.value} is Even Number`    
+            }    
+            else
+            {
+                document.getElementById("result").innerHTML = `${input.value} is Odd Number`    
+            }
+        }
+
+    </script>
+
+</body>
+</html>

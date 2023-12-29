@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-3 </title>
+</head>
+<body>
+
+
+    <h1> Simple Calculater </h1>
+
+    <table cellspacing="0" cellpadding="10px">
+        <tr>
+            <th> Loan Amount </th>
+            <td> <input type="number" id="loan_amt"> </td>
+        </tr>
+        <tr>
+            <th> Percentage </th>
+            <td> <input type="number" id="perc"> </td>
+        </tr>
+        <tr>
+            <th> Tenure </th>
+            <td> <input type="number" id="tenure"> </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"> <button onclick="int_calc()"> Show Installment </button> </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Monthly Installment : <span id="Show_Installment" style="color: green;"></span>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        function int_calc() 
+        {
+            var loan_amt = document.getElementById("loan_amt").value;
+            var perc = document.getElementById("perc").value;
+            var tenure = document.getElementById("tenure").value;
+
+            var interest = (loan_amt * (perc * 0.01)) / tenure;
+            var monthly_installment = (loan_amt / tenure + interest).toFixed(2);
+
+            document.getElementById("Show_Installment").innerHTML = monthly_installment;
+        }
+
+    </script>
+    
+</body>
+</html>

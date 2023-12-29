@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-6 || Leap Year </title>
+</head>
+<body>
+    
+    <h1> 6.	Leap Year Program in JavaScript with Logic, Explanation and Output </h1>
+    <hr>
+    Enter Year : 
+    <input type="number" id="year">
+    <button onclick="isLeapYear()"> Check Year </button>
+    <p id="result"></p>
+
+    <script>
+
+        function isLeapYear() 
+        {
+            var year = document.getElementById("year").value;
+
+            if ( year % 100 === 0 ? year % 400 === 0 : year % 4 === 0 ) 
+            {
+                document.getElementById("result").innerHTML = `Input Year ${year} is a Leap Year.`;
+            }    
+            else
+            {
+                document.getElementById("result").innerHTML = `Input Year ${year} is not a Leap Year.`;
+            }
+        }
+
+    </script>
+
+
+
+</body>
+</html>

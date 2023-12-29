@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-9 || Display The Size of Different Data Types </title>
+</head>
+<body>
+    
+    <h1> Display The Size of Different Data Types. </h1>
+    <hr>
+
+    <p>
+        JavaScript has 8 Datatypes : <br>
+        1. String <br>
+        2. Number <br>
+        3. Bigint <br>
+        4. Boolean <br>
+        5. Undefined <br>
+        6. Null <br>
+        7. Symbol <br>
+        8. Object <br><br>
+
+        The Object Datatype <br>
+        The object data type can contain : <br>
+
+        1. An object <br>
+        2. An array <br>
+        3. A date <br><br>
+
+        let x;       // Now x is undefined <br>
+        x = 5;       // Now x is a Number <br>
+        x = "John";  // Now x is a String <br> <br>
+
+
+        Using double quotes : <br>
+        let carName1 = "Volvo XC60"; <br><br>
+
+        Using single quotes: <br>
+        let carName2 = 'Volvo XC60'; <br> <hr>
+    </p>
+
+    <script>
+
+        // Numbers:
+        let length = 16;
+        let weight = 7.5;
+
+        // Strings:
+        let color = "Yellow";
+        let lastName = "Johnson";
+
+        // Booleans
+        let x = true;
+        let y = false;
+
+        // Object:
+        const person = {firstName:"John", lastName:"Doe"};
+
+        // Array object:
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        // Date object:
+        const date = new Date("2022-03-25");
+
+
+        //typeof 
+        document.write( 
+        typeof 0 + "<br>" + 
+        typeof 314 + "<br>" +
+        typeof 3.14 + "<br>" +
+        typeof (3) + "<br>" +
+        typeof (3 + 4) + "<br>" +
+        typeof ("string"))
+
+    </script>
+
+</body>
+</html>

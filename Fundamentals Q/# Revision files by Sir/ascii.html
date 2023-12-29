@@ -1,0 +1,52 @@
+<!--
+ASCII stands for American Standard Code for Information Interchange.
+
+ASCII is a numeric value that is given to different characters and symbols for computers to store and manipulate. 
+
+For example, the ASCII value of the letter 'A' is 65.
+-->
+
+<script>
+/*
+//ASCII Value of Character Using charCodeAt()
+
+// program to find the ASCII value of a character
+
+// take input from the user
+const string = prompt('Enter a character: ');
+
+// convert into ASCII value
+const result = string.charCodeAt(0);
+
+console.log(`The ASCII value is: ${result}`);
+
+*/
+
+/*
+In the above program, the charCodeAt() method is used to find the ASCII value of a character.
+
+The charCodeAt() method takes in an index value and returns an integer representing its 
+UTF-16 (16-bit Unicode Transformation Format) code.
+
+If you don't pass the index value, the default index value will be 0. 
+If the index value is out of range, it gives NaN.
+
+*/
+
+
+
+
+
+//ASCII Value of Character Using codePointAt()
+
+// program to find the ASCII value of a character
+
+// take input from the user
+const string = prompt('Enter a character: ');
+
+// convert into ASCII value
+const result = string.codePointAt(0);
+
+console.log(`The ASCII value is: ${result}`);
+
+</script>

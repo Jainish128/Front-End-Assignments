@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-5 || Prime Numbers Between Intervals </title>
+</head>
+<body>
+
+    <h1> Display Prime Numbers Between Intervals </h1>
+    <hr>
+
+    <script>
+
+        // A Prime number is a Positive Integer that is only Divisible by 1 and itself.
+
+        var lower = parseInt(prompt('Enter Lower Number : '));
+        var higher = parseInt(prompt('Enter Higher Number : '));
+
+        // Looping from Lower to Higher.
+        for (let i = lower; i <= higher; i++) 
+        {
+            var flag = 0;
+            // Looping through 2 to ith for the primality test
+            for (let j = 2; j < i; j++) 
+            {
+                if (i % j == 0) 
+                {
+                    flag = 1;
+                    break;    
+                }    
+            }    
+            if (flag == 0 && i != 1) 
+            {
+                document.write(i + "<br>");
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

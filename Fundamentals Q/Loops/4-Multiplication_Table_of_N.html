@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-4 || Multiplication Table of N </title>
+</head>
+<body>
+
+    <h1> Multiplication Table of N </h1>
+    <hr>
+    <p>
+        Input :  5 <br>
+        Output : <br>
+        5 * 1 = 5 <br>
+         5 * 2 = 10 <br>
+         5 * 3 = 15 <br>
+         5 * 4 = 20 <br>
+         5 * 5 = 25 <br> 
+         5 * 6 = 30 <br>
+         5 * 7 = 35 <br>
+         5 * 8 = 40 <br>
+         5 * 9 = 45 <br>
+         5 * 10 = 50 <br>
+    </p>
+    <hr>
+    <p id="ans"></p>
+
+    Enter a Number of Multiplication : 
+    <input type="number" id="num">
+    <button onclick="Multiplication()"> Multiplication </button>
+
+    <script>
+
+        function Multiplication() 
+        {
+            var number = document.getElementById("num").value;
+
+            for (let i = 1; i <= 10; ++i) 
+            {
+                document.write(`${number} * ${i} = ${number*i} <br>`);
+                // document.getElementById("ans").innerText = (`${number} * ${i} = ${number*i}`);
+                console.log(number + " * " + i + " = " + number * i);
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

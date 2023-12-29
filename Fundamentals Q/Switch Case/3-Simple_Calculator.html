@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-3 || Simple Calculator </title>
+</head>
+<body>
+    
+    <h1> Make a Simple Calculator Using Switch Case </h1>
+    <hr>
+    <button onclick="simpleCals()"> Simple Calc </button>
+    <p id="ans"></p>
+    <!-- <form>
+        Enter First Number : 
+        <input type="number" name="num1" id="firstNum">
+        <br><br>
+
+        Enter Second Number : 
+        <input type="number" name="num2" id="secondNum">
+        <br><br>
+
+        <button> Submit </button>
+    </form> -->
+
+
+
+
+
+    <!-- <script>
+
+        function simpleCalc(num1, num2, operator) 
+        {
+
+            var result;
+
+            switch (operator) 
+            {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+            
+                default:
+                    result = "Invalid Operator.";
+                    break;
+            }
+            return result;
+
+        }
+        
+        
+        var num1 = prompt('Enter First Number : ');
+        var num2 = prompt('Enter Second Number : ');
+        var operator = prompt('Enter Operator : ');
+
+        document.write(simpleCalc(num1, num2, operator));
+        
+        // document.getElementById("ans").innerHTML = `${num1} ${operator} ${num2} = ${result}`;
+
+    </script> -->
+
+
+    <script>
+
+        // Function to perform Arithmetic Operations
+        function Calc(num1, operator, num2) 
+        {
+            switch (operator) 
+            {
+                case '+':
+                    return num1 + num2;
+
+                case '-':
+                    return num1 - num2;
+
+                case '*':
+                    return num1 * num2;
+
+                case '/':
+                    return num1 / num2;
+            
+                default:
+                    return "Invalid Operator";
+            }    
+        }
+
+        // Input from the User
+        // const num1 = parseFloat(prompt("Enter the First Number : "));
+        // const operator = prompt("Enter an Operator ( +, -, *, / )");
+        // const num2 = parseFloat(prompt("Enter the Second Number : "));
+
+        document.write(Calc(10, "+", 20))
+        
+
+    </script>
+
+
+</body>
+</html>

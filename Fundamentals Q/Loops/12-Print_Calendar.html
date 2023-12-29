@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-12 || Print the Calendar of a Month of 31 Days. </title>
+</head>
+<body>
+
+    <h1> Print the Calendar of a Month of 31 Days. </h1>
+    <hr>
+
+    <!-- <script>
+
+        function print_Calendar() 
+        {
+            // Get the First day of the Month.
+            var firstDay = new Date(year, month - 1, 1).getDay();
+            var today = firstDay.getDay();
+            
+            // Create an Array to store the Days of the Month.
+            var days = [];
+            for (var i = 0; i < 31; i++) 
+            {
+                days.push(i + 1);    
+            }
+
+            // Define the names of the days of the week
+            const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+
+            // Create a Table to Display the Calendar.
+            var table = document.createElement("table");
+            table.border = 1;
+            table.cellSpacing = 0;
+            table.cellPadding = "5px";
+
+            // Add the Header Row to the Table.
+            var headerRow = table.appendChild(document.createElement("tr"));
+            for (var i = 0; i < 7; i++) 
+            {
+                var headerCell = headerRow.appendChild(document.createElement("th"));
+                headerCell.innerHTML = daysOfWeek[i];    
+            }
+
+            // Add the Days to the Table.
+            for (var i = 0; i < 31; i++) 
+            {
+                var row = table.appendChild(document.createElement("tr"));
+                for (var j = 0; j < 7; j++) 
+                {
+                    var cell = row.appendChild(document.createElement("td"));
+                    cell.innerHTML = days[i + firstDay];
+                    
+                    if (i + firstDay == today) 
+                    {
+                        cell.style.backgroundColor = "lightblue";    
+                    }
+                }    
+            }
+
+            // Add the Table to the Document.
+            document.body.appendChild(table);
+        }
+
+        // // Get the Current Month and Year.
+        var month = new Date().getMonth() + 1;
+        var year = new Date().getFullYear();
+
+        // Print the Calendar.
+        print_Calendar(month, year)
+
+    </script> -->
+    
+    <script>
+
+        function print_Calendar(year, month) 
+        {
+            const daysInMonth = 31;
+            const date = new Date(year, month - 1, 1);
+            const firstDay = date.getDay();
+            
+            // Create an Array to represent the Days in the Month.
+            const monthArray = new Array(daysInMonth).fill(0);
+
+            // Fill in the Days of the Month in th Array.
+            for (let day = 1; day < daysInMonth; day++) 
+            {
+                monthArray[firstDay + day - 1] = day;    
+            };
+
+            // Define the Names of the Days of Week
+            const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+            // Print the Calendar
+            console.log(`Calendar for ${year}/${month}`);
+            for (let i = 0; i < daysOfWeek.length; i++) 
+            {
+                process.stdout.write(daysOfWeek[i] + "\t");    
+            };
+            console.log();
+
+
+            for (let i = 0; i < monthArray.length; i++) 
+            {
+                if (i % 7 === 0 && i > 0) 
+                {
+                    console.log();    
+                }
+                if (monthArray[i] === 0) 
+                {
+                    process.stdout.write("\t");    
+                }
+                else
+                {
+                    process.stdout.write(monthArray[i] + "\t");
+                }
+            }
+            console.log();
+        }
+
+        const year = 2023;
+        const month = 10;
+        print_Calendar(year, month);
+
+
+    </script>
+
+
+</body>
+</html>

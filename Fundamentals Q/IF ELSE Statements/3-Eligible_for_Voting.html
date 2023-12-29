@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-3 || Eligible for Voting or Not </title>
+</head>
+<body>
+
+    <h1> Checking whether You are Eligible for Voting or Not. </h1>
+    <hr>
+
+    <input type="number" id="getInput">
+    <button onclick="voting()"> Check </button>
+
+    <script>
+
+        
+        function voting() 
+        {
+            var getInput = document.getElementById("getInput").value;
+            
+            if (getInput >= 18) 
+            {
+                alert('You are Eligible for Voting.');    
+            }
+            else
+            {
+                alert('You are not Eligible for Voting.');    
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

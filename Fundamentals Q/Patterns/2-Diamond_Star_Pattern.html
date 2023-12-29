@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-2 || Diamond Star * Pattern </title>
+</head>
+<body>
+
+    <h1> Diamond Star * Pattern </h1>
+    <hr>
+
+    <script>
+
+        /*
+            Solid Diamond Start Pattern : 
+
+                 *
+                ***
+               *****
+              *******
+             *********
+              *******
+               *****
+                ***
+                 *
+        */
+
+        let n = 5;
+        for (let i=1; i<n; i++) 
+        {
+            let str = '*';
+            let space = ' ';
+            document.write((space.repeat((n-i)) + str.repeat(i*2-1)) + "<br>");
+            console.log((space.repeat((n-i)) + str.repeat(i*2-1)));
+        }
+        for (let i=n; i>=1; i--) 
+        {
+            let str = '*';
+            let space = ' ';
+            document.write((space.repeat((n-i)) + str.repeat(i*2-1)) + "<br>");
+            console.log((space.repeat((n-i)) + str.repeat(i*2-1)));
+        }
+
+    </script>
+    
+</body>
+</html>

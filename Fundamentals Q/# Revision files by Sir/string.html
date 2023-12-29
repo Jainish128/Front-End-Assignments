@@ -1,0 +1,82 @@
+<script>
+
+//Program for Remove All Vowels from a String
+
+const str = 'coding beauty';
+const noVowels = str.replace(/[aeiou]/gi, '');
+document.write(noVowels + "</br>"); // cdng bty
+
+//=======================================================
+
+//Program to Delete a Substring From a String
+//const str1 = 'one,one,two';
+
+// Remove first occurrence of substring from string
+const removeFirst = str1.replace('one', '');
+console.log(removeFirst); // 👉️ ",one,two"
+
+// Remove all occurrences of substring from string
+const removeAll = str1.replaceAll('one', '');
+console.log(removeAll); // 👉️ ",,two"
+
+
+
+
+//=============================================================
+
+
+//Convert String to Integer Without Using Library Functions Using coercion
+
+let a = "100"; 
+document.write(typeof (a) + "</br>");
+
+document.write(typeof (a * 1) + "</br>"); // if we multiply with 1 then auto convert string into number
+
+//Using the Number() function
+const ax = "100"; 
+document.write(typeof(Number(ax)) + "</br>");
+
+
+let s = "123";
+let num = 0;
+let n = s.length;
+
+// Iterate till length of the string
+for (let i = 0; i < n; i++) 
+{
+	// Subtract 48 from the current digit
+	num = num * 10 + (s.charCodeAt(i) - 48);
+}
+
+// Print the answer
+document.write(num + "<br>");
+ 
+ 
+//============================================== 
+
+//Program to Convert Lowercase to Uppercase And Vice Versa
+
+let text = "Hello World!";
+document.write(text.toUpperCase() + "<br>");
+document.write(text.toLowerCase() + "<br>");
+
+
+//Program for Reverse a String Using Library
+
+const string = "Geeks for Geeks";
+
+document.write(string.split("").reduce((acc, char) => char + acc, "") + "<br>");
+document.write(string.split('').reverse().join('') + "<br>");
+document.write([...string].reverse().join("") + "<br>");
+document.write(Array.from(string).reverse().join("")+ "<br>");
+
+
+
+// compare 2 tring
+
+let text1 = "ab";
+let text2 = "ab";
+document.write(text1.localeCompare(text2));
+
+
+</script>

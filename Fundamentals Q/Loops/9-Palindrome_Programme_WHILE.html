@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-9 || Palindrome Programme using WHILE Loop </title>
+</head>
+<body>
+    
+    <h1> Palindrome Programme using WHILE Loop </h1>
+    <hr>
+
+    <p>
+        A number is a palindrome if the reversed number is equal to the original number. <br>
+        Example : 121, 101, and 12321 are palindrome numbers.
+    </p>
+    <hr>
+
+    <button onclick="Palindrome()"> Palindrome </button>
+    <p id="result"></p>
+
+
+    <script>
+
+        function Palindrome() 
+        {
+            var r, n, copy;
+            var rev = 0;
+            n =  parseInt(prompt('Enter a Number : '));
+            copy = n;
+            
+            while (n != 0) 
+            {
+                r = n % 10;
+                rev = rev * 10 + r;
+                n = parseInt(n/10);    
+            }
+            
+            if (copy == rev) 
+            {
+                document.getElementById("result").innerHTML = copy + ' is Palindrome a Number.';    
+            } 
+            else 
+            {
+                document.getElementById("result").innerHTML = copy + ' is not Palindrome a Number.';    
+            }
+        }
+
+    </script>
+    
+
+</body>
+</html>

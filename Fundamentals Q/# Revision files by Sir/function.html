@@ -1,0 +1,112 @@
+<script>
+
+// Bubble Sort Using a Function in Ascending and Descending Order
+
+function bubbleSort(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    for (let j = 0; j < i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // SWAP
+        ;[arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+      }
+    }
+  }
+  document.write(arr + "<br>");
+}
+bubbleSort([2, 3, 1, 2]) 
+
+// by function accending & decending
+
+var arr=[5,8,6,9,4,1,2,3];
+document.write(arr.sort() + "<br>");
+
+//======================================================================
+
+//Convert Binary to Decimal 
+
+/*
+101010
+101010 => 0 + 1 == 1
+1 * 2 + 0 == 2
+2 * 2 + 1 == 5
+5 * 2 + 0 == 10
+10 * 2 + 1 == 21
+21 * 2 + 0 == 42
+
+*/
+
+let x = '101010';
+document.write(parseInt(x, 2) + "<br>"); // 42
+
+/*
+
+//No Technology Method 
+
+function toDecimal(v) {
+  let binary = '';
+  if(typeof v == 'string') {
+    binary = v.split();
+  } else {
+      binary = v.toString().split();
+  }
+  let decimal = 0;
+  for(let i = 0; i < binary.length; i++) {
+      decimal = (decimal * 2) + binary[i];
+  }
+  return decimal;
+}
+*/
+
+// decimal to binary
+
+let decimal = 42;
+
+// to convert positive decimal to binary
+let binary = decimal.toString(2);
+document.write(binary + "<br>");
+
+
+//=====================================
+
+// Convert Octal Numbers to Decimals and Vice Versa number.toString(8) / oct_string.parseInt(8)
+
+var a = 10;
+var b = 12345;
+
+document.write("a = " + a.toString(8) + "<br>");
+document.write("b = " + b.toString(8) + "<br>");
+
+//conver octal string to the int again
+var oct = "012"; //octal of 10
+var dec = parseInt(oct,8);
+document.write("dec = " + dec + "<br>");
+
+
+
+
+// ============================================
+
+//Display Prime Numbers Between Intervals  // A prime number is a positive integer that is only divisible by 1 and itself.
+
+var lower = parseInt(prompt('Enter lower number: '));
+var higher = parseInt(prompt('Enter higher number: '));
+
+
+// looping from lower to higher
+for (let i = lower; i <= higher; i++) {
+    var flag = 0;
+    // looping through 2 to ith for the primality test 
+    for (let j = 2; j < i; j++) 
+	{
+        if (i % j == 0) 
+		{
+            flag = 1;
+            break;
+        }
+    }
+    if (flag == 0 && i!=1) {
+        document.write(i);
+    }
+}
+
+</script>

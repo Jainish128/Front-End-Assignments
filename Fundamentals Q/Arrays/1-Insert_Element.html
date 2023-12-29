@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-1 || Insert an Element at a Specific Position in an Array  </title>
+</head>
+<body>
+
+    <h1> Insert an Element at a Specific Position in an Array in JavaScript </h1>
+    <hr>
+
+
+    <script>
+
+        var arr = [1, 2, 3, 4, 5];
+
+        // Element to Insert
+        var element_to_Insert = 6;
+
+        // Position to Insert (0-based index) (it's select by Index Number)
+        var position = 3;
+
+        // Use the Splice method to Insert the Element at the Specified Position
+        arr.splice(position, 0, element_to_Insert);
+
+        // Now, arr will contain the Element at the specified Position.
+        document.write(arr);
+        // Output : [1, 2, 6, 3, 4, 5]
+
+    </script>
+    
+</body>
+</html>

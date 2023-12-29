@@ -1,0 +1,22 @@
+<script>
+
+abbrev_name =(str1)=> 
+{
+    var split_names = str1.trim().split(" "); 
+    //console.log(split_names);   // Rajesh,Kumar
+	//console.log(split_names.length);  // 2
+	
+	if (split_names.length > 1) 
+	{
+        document.write(split_names[0] + " " + split_names[1].charAt(0) + ".");
+    }
+	else
+	{
+		document.write(split_names[0]);
+	}
+};
+
+
+abbrev_name("Rajesh Kumar");
+
+</script>

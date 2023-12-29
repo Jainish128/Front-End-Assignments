@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-1 || Bubble Sort using a Function Ascending and Descending Order </title>
+</head>
+<body>
+    
+    <h1> Bubble Sort using a Function Ascending and Descending Order </h1>
+    <hr>
+
+    <script>
+        
+// ---------------------------------------------------------------------------------------
+        function bubble_Sort_Asce(arr) 
+        {
+            for (let i = arr.length - 1; i > 0; i--) 
+            {
+                for (let j = 0; j < i; j++) 
+                {
+                    if (arr[j] > arr[j+1])
+                    {
+                        // SWAP
+                        [ arr[j], arr[j+1]] = [arr[j+1], arr[j]]   
+                    }    
+                }   
+            }    
+            document.write(arr + "<br>");
+        }
+        document.write("Bubble Sort in Ascending Order using Function : ")
+        bubble_Sort_Asce([2,5,4,1,8]);
+
+// ---------------------------------------------------------------------------------------
+        function bubble_Sort_Desc(arr) 
+        {
+            for (let i = arr.length - 1; i > 0; i--) 
+            {
+                for (let j = 0; j < i; j++) 
+                {
+                    if (arr[j] < arr[j+1])
+                    {
+                        // SWAP
+                        [ arr[j], arr[j+1]] = [arr[j+1], arr[j]]   
+                    }    
+                }   
+            }    
+            document.write(arr + "<br>");
+        }
+        document.write("Bubble Sort in Descending Order using Function : ")
+        bubble_Sort_Desc([2,5,4,1,8]);
+        document.write("<hr>")
+
+
+// ---------------------------------------------------------------------------------------
+        // By Built-In Function Ascending and Descending Order : sort()
+        var arr2 = [5,8,6,9,4,1,2,3];
+        document.write("Array / Bubble Sort in Ascending Order using sort() : " + arr2.sort() + "<br>");
+        document.write("Array in Descending Order using reverse() : " + arr2.reverse() + "<br>");
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script>
+
+// factorial of 5 is equal to 1 * 2 * 3 * 4 * 5 = 120.
+
+const number = parseInt(prompt('Enter a positive integer: '));
+
+if (number < 0) 
+{
+    document.write('Error! Factorial for negative number does not exist.');
+}
+else if (number === 0) 
+{
+    document.write(`The factorial of ${number} is 1.`);
+}
+else 
+{
+    let factorial = 1;
+    for (i = 1; i <= number; i++) 
+	{
+        factorial=factorial*i;
+    }
+    document.write(`The factorial of ${number} is ${factorial}.`);
+}
+</script>

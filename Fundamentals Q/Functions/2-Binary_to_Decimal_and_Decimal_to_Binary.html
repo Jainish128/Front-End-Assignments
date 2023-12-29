@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-2 || Convert Binary Numbers to Decimal or Decimal Numbers to Binary </title>
+</head>
+<body>
+
+    <h1> Convert Binary Numbers to Decimal or Decimal Numbers to Binary in JS </h1>
+    <hr>
+
+    <script>
+
+        /*
+            101010
+            101010 => 0 + 1 == 1
+            1 * 2 + 0 == 2
+            2 * 2 + 1 == 5
+            5 * 2 + 0 == 10
+            10 * 2 + 1 == 21
+            21 * 2 + 0 == 42
+        */
+
+        // Convert Binary to Decimal
+        let a = '101010';
+        document.write("Binary to Decimal : " + parseInt(a,2) + "<br>");     // Output : 42
+
+
+        // No Technology method
+
+        function toDecimal(b) 
+        {
+            let binary = '';
+            if (typeof b == 'string') 
+            {
+                binary = b.split();    
+            }    
+            else
+            {
+                binary = b.toString().split();
+            }
+            let decimal = 0;
+            for (let i = 0; i < binary.length; i++) 
+            {
+                decimal = (decimal * 2) + binary[i];
+            }
+            return decimal;
+        }
+        // Decimal to Binary
+        let decimal = 42;
+
+        // to convert Positive Decimal to Binary
+        let binary = decimal.toString(2);
+        document.write("Decimal to Binary (No Technology Method) : " + binary + "<br>");
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

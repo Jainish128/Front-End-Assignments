@@ -1,0 +1,59 @@
+<!--
+function isVowel(character){ 
+	if(character == "a"||"e"||"i"||"o"||"u") 
+	{ 
+		return true 
+	} 
+	else 
+	{ 
+		return false 
+	} 
+} 
+
+//For each element of the array (char in the string), 
+if it is a vowel, and it's the first element, returns the string + way.
+-->
+<script>
+// Without RegEx:
+
+function isVowel(char) 
+{
+   if (char.length == 1) 
+   {
+    var vowels = new Array("a", "e", "i", "o", "u");
+    var isVowel = false;
+
+    for (e in vowels) 
+	{
+      if (vowels[e] == char) 
+	  {
+        isVowel = true;
+      }
+    }
+
+    return isVowel;
+  }
+}
+
+document.write(isVowel("u"));
+
+
+
+/*
+
+//With RegEx:
+
+
+function isVowelRegEx(char) 
+{
+  if (char.length == 1) 
+  {
+    return /[aeiou]/.test(char);
+  }
+}
+document.write(isVowelRegEx("u"));
+
+*/
+
+
+</script>

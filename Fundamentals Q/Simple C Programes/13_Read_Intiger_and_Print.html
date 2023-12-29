@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-13 || Read Integer and Print First Three Powers (N^1, N^2, N^3) </title>
+</head>
+<body>
+
+    <h1> Read Integer and Print First Three Powers (N^1, N^2, N^3) </h1>
+    <hr>
+
+    <script>
+
+        // Read and Integer from the User.
+        const readLine = require('readLine');       // require is not defined.
+        const rl = readLine.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+
+        rl.quetion('Enter an Integer : ', (input) => {
+            // Parse the Input as an Integer.
+            const number = parseInt(input);
+
+            if (isNaN(number)) 
+            {
+                console.log("Invalid input. Please enter a Valid Integer.");    
+            }
+            else
+            {
+                // Calculate and Print the First Three Powers of the Number.
+                const power1 = Math.pow(number, 1);
+                const power2 = Math.pow(number, 2);
+                const power3 = Math.pow(number, 3);
+
+                console.log(`N^1 = ${power1}`);
+                console.log(`N^2 = ${power2}`);
+                console.log(`N^3 = ${power3}`);
+            }
+
+            // Close the Input Stream
+            rl.close();
+        });
+
+    </script>
+    
+</body>
+</html>

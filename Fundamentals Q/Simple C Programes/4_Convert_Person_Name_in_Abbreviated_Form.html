@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Convert a Person's Name in Abbreviated Form </title>
+</head>
+<body>
+    
+    <h1> Convert a Person's Name in Abbreviated Form </h1>
+    <hr>
+
+
+    <script>
+
+        var Abbreviated_name = (str) => {
+            var split_names = str.trim().split(" ");
+            document.write( "Split Name is : " + split_names + "<br>");        // Jainish Patel
+            document.write( "Split Name Length is : " + split_names.length + "<br>");        // 2
+
+            if (split_names.length > 1) 
+            {
+                document.write( "Abbreviated Form : " + split_names[0] + " " + split_names[1].charAt(0) + "." + split_names[2] );    
+            }
+            else
+            {
+                document.write(split_names[0]);
+            }
+
+        }
+
+        Abbreviated_name("Jainish Shaileshbhai Patel");
+
+    </script>
+
+
+</body>
+</html>

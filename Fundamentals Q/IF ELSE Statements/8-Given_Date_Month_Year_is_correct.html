@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-8 || Given Date Month and the Year Is Correct or Not Using If-Else </title>
+</head>
+<body>
+
+    <h1> Given Date Month and the Year Is Correct or Not Using If-Else </h1>
+    <hr>
+
+    <p id="ans"></p>
+
+    <script>
+
+        const date = new Date("2023/10/18");
+
+        Data.prototype.isValid = function () 
+        {
+            // If the date object is invalid it
+            // will return 'NaN' on getTime()
+            // and NaN is never equal to itself
+            return this.getTime() === this.getTime();    
+        }
+
+        function isValidateDate() 
+        {
+            document.getElementById("ans").innerHTML = date.isValid();
+        }
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-3 || Convert Octal Numbers to Decimal </title>
+</head>
+<body>
+
+    <h1> Convert Octal Numbers to Decimal and Vice Versa </h1>
+    <hr>
+    Convert Octal Numbers to Decimal : number.toString(8) <br>
+    Convert Decimal to Octal Numbers : octal_string.parseInt(8)     // praseInt(decimal,8)
+    <hr>
+
+    <script>
+
+
+        var a = 10;
+        var b = 12345;
+
+        document.write("a = " + a.toString(8) + "<br>")
+        document.write("b = " + b.toString(8) + "<br>")
+
+        // Convert Octal String to the Integer Again :
+        var oct = "012";        // Octal of 10
+        var dec = parseInt(oct,8);
+        document.write("Decimal = " + dec );
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-5 || Calculate Simple Interest </title>
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: whitesmoke;
+        }
+        main
+        {
+            width: 350px;
+            height: 300px;
+            background-color: white;
+            /* border: 3px solid red; */
+            border-radius: 10px;
+            box-shadow: 0 0 4px black;
+            text-align: center;
+        }
+
+        main h2
+        {
+            padding: 10px 0;
+        }    
+        main table
+        {
+            width: 100%;
+        }
+        main table tr td input
+        {
+            width: 90%;
+            height: 40px;
+            border: none;
+            border-bottom: 1px solid black;
+            font-size: 16px;
+        }
+        main table tr td input:focus
+        {
+            outline: none;
+        }
+
+        main table tr td button
+        {
+            padding: 3px 20px;
+            font-size: 18px;
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <main>
+
+        <h2> Calculate Simple Interest </h2> 
+        <hr><br>
+
+        <table cellspacing="0">
+            <tr>
+                <th> <label for="capital"> Loan Amount </label> </th>
+                <td> <input type="number" id="capital" placeholder="Enter Loan Amount"> </td>
+            </tr> 
+            <tr>
+                <th> <label for="interest"> Interest </label> </th>
+                <td> <input type="number" id="interest" placeholder="Enter Interest Amount"> </td>
+            </tr> 
+            <tr>
+                <th> <label for="tenure"> Tenure in Months </label> </th>
+                <td> <input type="number" id="tenure" placeholder="Enter Tenure in Months"> </td>
+            </tr>
+            <tr> <td colspan="3"> &nbsp; </td> </tr>
+            <tr align="center"> 
+                <td colspan="3"> <button onclick="calculate()"> Calculate </button> </td>
+            </tr>
+            <tr> <td colspan="3"> &nbsp; </td> </tr>
+            <tr align="center">
+                <td colspan="3"> Monthly Payable Installment :  <span id="installment" style="color: green;"></span> </td>
+            </tr>
+        </table>
+
+
+    </main>
+
+
+    <script>
+        function calculate() 
+        {
+            var capital = document.getElementById("capital").value;
+            var interest = document.getElementById("interest").value;
+            var tenure = document.getElementById("tenure").value;
+            
+            var only_int = (capital * (interest * 0.01)) / tenure;
+            var monthly_Payment = (capital / tenure + only_int).toFixed(2);
+            
+            document.getElementById("installment").innerHTML = monthly_Payment;
+        }
+    </script>
+
+
+
+</body>
+</html>

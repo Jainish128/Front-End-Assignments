@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-13 || Generate IP Addresses(IPv4 & IPv6) </title>
+</head>
+<body>
+
+    <h1> Generate IP Addresses(IPv4 & IPv6) using For Loop in JavaScript </h1>
+    <hr>
+    
+    <button onclick="GenerateIP()"> Generate IP Address </button>
+    <p id="ip4Add"></p>
+    <p id="ip6Add"></p>
+
+    <!-- <script>
+
+        var netmask = require("netmask").Netmask;
+        var block = new netmask('10.0.0.0/24');
+        console.log(block);         // gives Block details
+
+        var blockSize = block.size - 1;
+        var randomIndex = Math.floor(Math.random() * blockSize) + 1;    // Generate a Random Number Less than the size of the Block.
+
+        console.log("RandomIndex is : " + randomIndex);
+
+        block.forEach(function (ip, long, index) 
+        {
+            if (index == randomIndex) 
+            {
+                console.log('IP : ' + ip);
+                console.log('Index : ' + index);
+                // Cannot Break ! this is a forEach :     
+            }    
+        });
+
+    </script> -->
+
+    <!-- <script>
+
+        function generateIPadd() 
+        {
+            for (let i = 0; i < 256; i++) 
+            {
+                var octets = [i];
+                for (let j = 0; j < 256; j++) 
+                {
+                    octets.push(j);
+                    for (let s = 0; s < 256; s++) 
+                    {
+                        octets.push(s);
+                        for (let p = 0; p < 256; p++) 
+                        {
+                            octets.push(p);
+                            var IPaddress = octets.join(".");
+                            document.getElementById("ans").innerHTML = IPaddress;
+                            break;
+                        }
+                    }
+                }
+            }    
+        }
+
+        // generateIPadd();
+
+    </script> -->
+
+    <script>
+
+        // Function to Generate a Random Number between Min and Max
+        function getRandomNumber(min, max) 
+        {
+            return Math.floor(Math.random() * (max - min + 1)) + min;    
+        }
+
+        // Generate a Random IPv4 Address
+        function generateRandomIPv4() 
+        {
+            const parts = [];
+            for (let i = 0; i < 4; i++) 
+            {
+                parts.push(getRandomNumber(0, 255));
+            }    
+            return parts.join('.');
+        }
+
+        // Generate a Random IPv6 Address
+        function generateRandomIPv6() 
+        {
+            const parts = [];
+            for (let i = 0; i < 8; i++) 
+            {
+                let segment = '';
+                for (let j = 0; j < 4; j++) 
+                {
+                    segment += getRandomNumber(0,15).toString(16);
+                }
+                parts.push(segment);
+            }    
+            return parts.join(":");
+        }
+
+        // Generate and Print Random IPv4 and IPv6 Addresses
+        function GenerateIP()
+        {
+            const randomIPv4 = generateRandomIPv4();    
+            const randomIPv6 = generateRandomIPv6();
+            
+            document.getElementById("ip4Add").innerHTML = `Random IPv4 : ${randomIPv4}`;
+            document.getElementById("ip6Add").innerHTML = `Random IPv6 : ${randomIPv6}`;
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

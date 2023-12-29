@@ -1,0 +1,86 @@
+<script>
+
+//Insert an Element at a Specific Position in an Array
+//If we want to add to the array, we set the second argument to zero (0), instructing the splice() method not to delete any array elements.
+
+
+
+const countries = ["Ghana", "Nigeria", "Rwanda"];
+countries.splice(1,0, 'Kenya', 'Mali');
+
+document.write(countries + "</br>"); // ["Ghana","Kenya","Mali","Nigeria","Rwanda"]
+
+
+
+
+//Element from an Array at a Desired or Specific Position
+
+const countries1 = ["raj", "akash", "nayan","mahesh"];
+countries1.splice(2,1);
+document.write(countries1 + "</br>"); // ["raj", "akash", "mahesh"];
+
+
+
+
+
+
+//Remove Duplicates Items
+
+let arr = ["apple", "mango", "apple", "orange", "mango", "mango"]; 
+
+function removeDuplicates(arr) 
+{ 
+	return arr.filter((item,index) => { arr.indexOf(item) === index }); 
+} 
+document.write(removeDuplicates(arr) + "</br>");
+
+
+
+
+
+//collections of unique values.
+
+
+let arr1 = ["apple", "mango", "apple", 
+		"orange", "mango", "mango"]; 
+
+function removeDuplicates1(arr1) { 
+	return [...new Set(arr1)]; 
+} 
+
+document.write(removeDuplicates1(arr1) + "</br>");
+
+
+
+
+
+
+
+
+// polidrom
+
+function checkPalindrome(string) {
+
+    // convert string to an array
+    const arrayValues = string.split('');
+
+    // reverse the array values
+    const reverseArrayValues = arrayValues.reverse();
+
+    // convert array to string
+    const reverseString = reverseArrayValues.join('');
+
+    if(string == reverseString) {
+        console.log('It is a palindrome');
+    }
+    else {
+        console.log('It is not a palindrome');
+    }
+}
+
+//take input
+const string = prompt('Enter a string: ');
+
+checkPalindrome(string);
+</script>
+

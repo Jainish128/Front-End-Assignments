@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-6 || Remove All Vowels from a String </title>
+</head>
+<body>
+    
+    <h1> Remove All Vowels from a String using Switch Case </h1>
+    <hr>
+
+    <p id="res"></p>
+
+    <script>
+
+        function removeVowels(str) 
+        {
+            const vowels = "aeiou";
+            let newStr = "";
+            
+            for (let i = 0; i < str.length; i++) 
+            {
+                switch (str[i]) 
+                {
+                    case "a":
+                    case "e":
+                    case "i":
+                    case "o":
+                    case "u":
+                        break;
+
+                    default:
+                        newStr += str[i];
+                }
+            }
+            return newStr;
+        }
+
+        // const str = "Hello World";
+        const str = prompt('Enter some Words :');
+        const newStr = removeVowels(str);
+        // document.write(str);
+        // document.write(newStr);
+
+        document.getElementById("res").innerHTML = `Remobe Vowels from ${str} = ${newStr}`;
+
+    </script>
+
+
+
+</body>
+</html>

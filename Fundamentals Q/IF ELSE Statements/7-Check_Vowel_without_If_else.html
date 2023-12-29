@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-7 || Character Is a Vowel or Not Using If-ElseCheck </title>
+</head>
+<body>
+
+    <h1> Check Character Is a Vowel or Not Using If-Else </h1>
+    <hr>
+
+    <input type="text" id="text" max="1">
+    <button onclick="isVowel_RegEx()"> Check Vowel </button>
+    <p id="ans"></p>
+
+    <script>
+
+        var text = document.getElementById('text').value;
+        var ans = document.getElementById("ans");
+
+        function isVowel(character) 
+        {
+            if (character == "a" || "i" || "o" || "u" || "e") 
+            {
+                return true;
+            }    
+            else
+            {
+                return false;
+            }
+        }
+
+
+
+        // function isVowel_RegEx() 
+        // {
+        //     if (/[aeiou]/.test(text)) 
+        //     {
+        //         ans.innerHTML = "This Character is Vowel." 
+        //     }    
+        //     else
+        //     {
+        //         ans.innerHTML = "This Character is not Vowel." 
+        //     }
+        // }
+
+        function isVowel_RegEx(char) 
+        {
+            if (char.length == 1) 
+            {
+                return /[aeiou]/.test(char);  
+            }    
+        }
+        document.write(isVowel_RegEx("a"));
+
+    </script>    
+
+
+</body>
+</html>

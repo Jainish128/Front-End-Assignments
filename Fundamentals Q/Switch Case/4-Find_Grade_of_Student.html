@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-4 || Find the Grade of a Student </title>
+</head>
+<body>
+
+    <h1> Find the Grade of a Student using Switch Case </h1>
+    <hr>
+
+    <!-- Enter Percentage :  -->
+    <!-- <input type="number" id="per"> -->
+    <!-- <button onclick="grade()"> Check Grade </button> -->
+
+    <h2 id="res"></h2>
+
+    <script>
+
+        function grade(score) 
+        {
+            var grade;
+            
+            switch (true) 
+            {
+                case score >= 90:
+                    grade = 'Grade : A'
+                    break;
+
+                case score >= 70:
+                    grade = 'Grade : B'
+                    break;
+
+                case score >= 40:
+                    grade = 'Grade : C'
+                    break;
+            
+                default:
+                    grade = 'FAIL'
+                    break;
+            }
+            return grade;
+
+            // document.getElementById("res").innerHTML = grade;
+
+        }
+        // Test the function with a Score.
+        const score = 92;
+        const studentGrade = grade(score);
+        document.getElementById("res").innerHTML = `The Student's Grade is : ${studentGrade}`;
+
+
+    </script>
+    
+</body>
+</html>

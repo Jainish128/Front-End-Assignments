@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-1 || Home Pattern </title>
+    <style>
+        body
+        {
+            margin: 0 0 0 50px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- --------------- Home Pattern || Half Pyramid of * --------------- -->
+    <h1> Patterns </h1>
+    <hr>
+    Home Pattern || Half Pyramid of *
+    <hr>
+    <script>
+        // Home Pattern || Half Pyramid of *
+        /*
+            *
+            * *
+            * * *
+            * * * *
+            * * * * *
+        */
+        for (let i=1; i<=5; i++) 
+        {
+            for (let j=1; j<=i; j++) 
+            {
+                document.write("* ");    
+            }
+            document.write("<br>")
+        }
+    </script>
+    <hr>
+
+<!-- --------------- Home Pattern || Half Pyramid of Numbers --------------- -->
+    Home Pattern || Half Pyramid of Numbers
+    <hr>
+    <script>
+        // Home Pattern || Half Pyramid of Numbers
+        /*
+            1
+            1 2
+            1 2 3
+            1 2 3 4
+            1 2 3 4 5
+        */
+        for (let i=1; i<=5; i++) 
+        {
+            for (let j=1; j<=i; j++) 
+            {
+                document.write(" " + j);
+            }    
+            document.write("<br>");
+        }
+
+    </script>
+
+<!-- --------------- Home Pattern ||  --------------- -->
+
+    <hr>
+
+    <script>
+
+        // Inverted Half Pyramid of *
+
+        for (let i=1; i<=5; i++) 
+        {
+            for (let j=1; j<=i; j++) 
+            {
+                document.write("* ");    
+            }
+            for (let k=5; k>=i; k--) 
+            {
+                document.write("* ")    
+            }    
+            document.write("<br>")
+        }
+
+    </script>
+
+
+
+
+
+
+<!-- --------------- Home Pattern ||  --------------- -->
+    <hr>
+    <!-- <script>
+
+        for (let i=1; i<=5; i++) 
+        {
+      
+            for (let j=1; j<=i; j++) 
+            {
+                document.write("* ");
+
+                for (let k=1; k<=i+j; k++) 
+                {
+                    document.write("* ")   
+                }    
+            }    
+            document.write("<br>")
+        }
+
+
+    </script> -->
+
+
+    
+</body>
+</html>

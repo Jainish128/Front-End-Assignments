@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-1 || Check Charactres </title>
+</head>
+<body>
+
+    <h1> Check Uppercase or Lowercase or Digit or Special Character. </h1>
+    <hr>
+
+    <input type="text" id="check">
+    <button onclick="checkCharacter()"> Check Character </button>
+    <p id="result"></p>
+
+    <script>
+
+        var checkChar = document.getElementById("check");
+
+
+        function checkCharacter() 
+        {   
+            if (checkChar.value == "") 
+            {
+                document.getElementById("result").innerHTML = "";     
+            }
+            
+            else if (checkChar.value.match(/^[A-Z]+$/)) 
+            {
+                document.getElementById("result").innerHTML = "Enterd Value is Uppercase Character.";
+            }
+            else if (checkChar.value.match(/^[a-z]+$/)) 
+            {
+                document.getElementById("result").innerHTML = "Enterd Value is Lowercase Character.";
+            }
+            else if (checkChar.value.match(/^[0-9]+$/)) 
+            {
+                document.getElementById("result").innerHTML = "Enterd Value is Digit/Numeric Character.";
+            }
+            // else if (checkChar.value.match(/^[`~!@#$%^&*()-_=+/*{[]};:'"<,.>]+$/))
+            else 
+            {
+                document.getElementById("result").innerHTML = "Enterd Value is Special Character.";
+            }
+            // else
+            // {
+            //     document.getElementById("result").innerHTML = "";
+            // }
+            
+        }
+        
+
+    </script>
+    
+</body>
+</html>

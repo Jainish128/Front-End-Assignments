@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-12 || Calculate the Factorial of a Given Number. </title>
+</head>
+<body>
+
+    <h1> Calculate the Factorial of a Given Number. </h1>
+    <hr>
+
+    <p>
+        Programme for Factorial of a Number : <br>
+        n! = n * (n-1)*(n-2)*.....*1 <br>
+        4! = 4*3*2*1 = 24
+        6! = 6*5*4*3*2*1 = 720
+    </p>
+
+    <script>
+
+        let number = 5;
+
+        function factorial(number) 
+        {
+            let ans = 1;
+
+            if (number === 0) 
+            {
+                return 1;
+            }
+            for (let i=2; i<=number; i++)
+            {
+                ans = ans * i;
+            }
+            return ans;
+        }
+
+        document.write(factorial("5"));
+
+    </script>
+
+
+    
+</body>
+</html>
